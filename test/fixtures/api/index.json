@@ -1,0 +1,7 @@
+{
+  "https://api.themeparks.wiki/v1/destinations": "destinations.json",
+  "https://api.themeparks.wiki/v1/entity/dae968d5-630d-4719-8b06-3d107e944401/live": "disneyland-park-live.json",
+  "https://api.themeparks.wiki/v1/entity/dae968d5-630d-4719-8b06-3d107e944401/schedule": "disneyland-park-schedule.json",
+  "https://api.themeparks.wiki/v1/entity/9e938687-fd99-46f3-986a-1878210378f8/live": "parc-asterix-live.json",
+  "https://api.themeparks.wiki/v1/entity/9e938687-fd99-46f3-986a-1878210378f8/schedule": "parc-asterix-schedule.json"
+}

@@ -31,16 +31,22 @@ pushing.
 ## Architecture
 
 ```
-index.js                          SDK wiring only: handlers registered before connect()
-src/devices/index.js              registry of the device blueprints + dispatch helpers
-src/devices/<type>.js             one device type per file (buildDevice, onPoll, onSetValue...)
-src/scenes.js                     scene action handlers (manifest `scene_actions`)
-src/widgets.js                    dashboard widget handlers (manifest `widgets`)
+index.js                          SDK wiring only (src/app.js registers the handlers)
+src/app.js                        handlers on a GladysIntegration or the SDK's fake Gladys
+src/service.js                    runtime: parks read, own timer, discovery, states, triggers
+src/api.js                        ThemeParks.wiki client: park list, live data, schedule
+src/http.js                       fetch with timeout, size cap, ETag, User-Agent
+src/time.js                       park-local date and hours, opening slots
+src/devices.js                    park and attraction devices, their states
+src/parks.js                      European parks offered in the form (manifest options)
+src/messages.js                   texts in en/fr/de/es
+src/scenes.js                     scene action wait_summary
+src/widgets.js                    widget waits
 src/config.js                     DEFAULT_CONFIG (mirrors the manifest defaults) + normalization
-src/weather.js                    example driver (Open-Meteo)
 gladys-assistant-integration.json manifest: name, config_schema, actions, image...
-docs/en.md, docs/fr.md            user documentation, re-hosted by Gladys (mandatory)
+docs/{en,fr,de,es}.md             user documentation, re-hosted by Gladys (mandatory)
 test/                             node --test, against the SDK's fake Gladys (integration-sdk/testing)
+test/fixtures/api/                real API answers (2026-10-30, 13:03 Paris), see index.json
 .github/scripts/release.mjs       release helpers (manifest bump, changelog), tested in test/
 ```
 
@@ -251,3 +257,25 @@ long, et sur un « Sie »/« Ihr… » de politesse en allemand. Le store exige 
 - Docs `en`, `fr`, `de`, `es` avec les mêmes sections.
 - Chauffe, ouverture, sécurité : ne rien rendre pilotable « comme un thermostat » ou par un assistant
   vocal quand une erreur serait dangereuse (leçon d'OctoPrint).
+
+## Parcs d'attractions (ThemeParks.wiki)
+
+- API publique `https://api.themeparks.wiki/v1`, sans clé. Conditions (https://www.themeparks.wiki/terms) : crédit
+  « Powered by ThemeParks.wiki » lié au site là où les données sont montrées (écran de configuration, docs, bouton du
+  widget, masquable : usage personnel, « requested but not required »), live au plus toutes les 5 min par parc (d'où
+  le minimum de 300 s), 429 avec `Retry-After` (pause globale `backoffUntil`), 300 requêtes/min par IP sans clé.
+  Pas de licence publiée pour le logo : cover en pictogramme maison.
+- On lit le **parc** (`/entity/<park>/live`), pas la destination : Disneyland Paris a deux parcs. `liveData` mélange
+  ATTRACTION, SHOW, RESTAURANT : seules les ATTRACTION deviennent des appareils. Une attraction fermée peut n'avoir
+  **aucun** `queue` (Parc Astérix) ou `STANDBY.waitTime: null` (Disneyland) : la structure de l'appareil ne dépend donc
+  pas de la file (toujours attente, en service, état), sinon « Mettre à jour » apparaîtrait chaque soir.
+- Attente publiée à 0 hors service (sinon la dernière attente resterait affichée la nuit) ; jamais inventée en
+  service sans file (aires de jeux). Attente moyenne du parc : attentes > 0 des attractions en service seulement (les
+  stations de train à 0 la tireraient vers le bas).
+- Horaires : seuls les créneaux `OPERATING` comptent ; `EXTRA_HOURS` (hôtels Disney) et `TICKETED_EVENT` (soirées
+  Halloween d'Astérix, 19 h – 1 h) ne sont pas l'ouverture. Dates et heures dans le fuseau du parc (`timezone` du
+  live), via `Intl`, horloge injectée.
+- `wait_below` ne compare que deux lectures en service : l'ouverture du matin à 5 min ne déclenche pas tous les
+  seuils. `park_opened` vient des horaires (pas d'état du parc dans le live).
+- Les parcs proposés dans le formulaire sont des UUID figés (`src/parks.js`, liste du 30/10/2026) : les autres passent
+  par `other_parks` (nom, nom de destination ou UUID, résolu contre `/destinations`).

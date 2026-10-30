@@ -1,0 +1,411 @@
+{
+  "id": "dae968d5-630d-4719-8b06-3d107e944401",
+  "name": "Disneyland Park",
+  "entityType": "PARK",
+  "timezone": "Europe/Paris",
+  "schedule": [
+    {
+      "date": "2026-10-30",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-10-30T09:00:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-10-30T08:00:00+01:00"
+    },
+    {
+      "date": "2026-10-30",
+      "type": "OPERATING",
+      "closingTime": "2026-10-30T22:00:00+01:00",
+      "openingTime": "2026-10-30T09:00:00+01:00"
+    },
+    {
+      "date": "2026-10-31",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-10-31T09:00:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-10-31T08:00:00+01:00"
+    },
+    {
+      "date": "2026-10-31",
+      "type": "OPERATING",
+      "closingTime": "2026-10-31T23:00:00+01:00",
+      "openingTime": "2026-10-31T09:00:00+01:00"
+    },
+    {
+      "date": "2026-11-01",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-01T09:00:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-01T08:00:00+01:00"
+    },
+    {
+      "date": "2026-11-01",
+      "type": "OPERATING",
+      "closingTime": "2026-11-01T22:00:00+01:00",
+      "openingTime": "2026-11-01T09:00:00+01:00"
+    },
+    {
+      "date": "2026-11-02",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-02T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-02T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-02",
+      "type": "OPERATING",
+      "closingTime": "2026-11-02T21:00:00+01:00",
+      "openingTime": "2026-11-02T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-03",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-03T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-03T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-03",
+      "type": "OPERATING",
+      "closingTime": "2026-11-03T21:00:00+01:00",
+      "openingTime": "2026-11-03T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-04",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-04T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-04T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-04",
+      "type": "OPERATING",
+      "closingTime": "2026-11-04T21:00:00+01:00",
+      "openingTime": "2026-11-04T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-05",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-05T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-05T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-05",
+      "type": "OPERATING",
+      "closingTime": "2026-11-05T21:00:00+01:00",
+      "openingTime": "2026-11-05T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-06",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-06T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-06T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-06",
+      "type": "OPERATING",
+      "closingTime": "2026-11-06T21:00:00+01:00",
+      "openingTime": "2026-11-06T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-07",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-07T09:00:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-07T08:00:00+01:00"
+    },
+    {
+      "date": "2026-11-07",
+      "type": "OPERATING",
+      "closingTime": "2026-11-07T22:00:00+01:00",
+      "openingTime": "2026-11-07T09:00:00+01:00"
+    },
+    {
+      "date": "2026-11-08",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-08T09:00:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-08T08:00:00+01:00"
+    },
+    {
+      "date": "2026-11-08",
+      "type": "OPERATING",
+      "closingTime": "2026-11-08T22:00:00+01:00",
+      "openingTime": "2026-11-08T09:00:00+01:00"
+    },
+    {
+      "date": "2026-11-09",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-09T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-09T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-09",
+      "type": "OPERATING",
+      "closingTime": "2026-11-09T21:00:00+01:00",
+      "openingTime": "2026-11-09T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-10",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-10T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-10T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-10",
+      "type": "OPERATING",
+      "closingTime": "2026-11-10T21:00:00+01:00",
+      "openingTime": "2026-11-10T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-11",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-11T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-11T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-11",
+      "type": "OPERATING",
+      "closingTime": "2026-11-11T22:00:00+01:00",
+      "openingTime": "2026-11-11T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-12",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-12T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-12T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-12",
+      "type": "OPERATING",
+      "closingTime": "2026-11-12T21:00:00+01:00",
+      "openingTime": "2026-11-12T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-13",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-13T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-13T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-13",
+      "type": "OPERATING",
+      "closingTime": "2026-11-13T20:30:00+01:00",
+      "openingTime": "2026-11-13T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-14",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-14T09:00:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-14T08:00:00+01:00"
+    },
+    {
+      "date": "2026-11-14",
+      "type": "OPERATING",
+      "closingTime": "2026-11-14T22:00:00+01:00",
+      "openingTime": "2026-11-14T09:00:00+01:00"
+    },
+    {
+      "date": "2026-11-15",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-15T09:00:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-15T08:00:00+01:00"
+    },
+    {
+      "date": "2026-11-15",
+      "type": "OPERATING",
+      "closingTime": "2026-11-15T22:00:00+01:00",
+      "openingTime": "2026-11-15T09:00:00+01:00"
+    },
+    {
+      "date": "2026-11-16",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-16T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-16T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-16",
+      "type": "OPERATING",
+      "closingTime": "2026-11-16T22:00:00+01:00",
+      "openingTime": "2026-11-16T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-17",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-17T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-17T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-17",
+      "type": "OPERATING",
+      "closingTime": "2026-11-17T19:00:00+01:00",
+      "openingTime": "2026-11-17T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-18",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-18T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-18T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-18",
+      "type": "OPERATING",
+      "closingTime": "2026-11-18T22:00:00+01:00",
+      "openingTime": "2026-11-18T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-19",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-19T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-19T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-19",
+      "type": "OPERATING",
+      "closingTime": "2026-11-19T19:00:00+01:00",
+      "openingTime": "2026-11-19T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-20",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-20T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-20T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-20",
+      "type": "OPERATING",
+      "closingTime": "2026-11-20T20:30:00+01:00",
+      "openingTime": "2026-11-20T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-21",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-21T09:00:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-21T08:00:00+01:00"
+    },
+    {
+      "date": "2026-11-21",
+      "type": "OPERATING",
+      "closingTime": "2026-11-21T22:00:00+01:00",
+      "openingTime": "2026-11-21T09:00:00+01:00"
+    },
+    {
+      "date": "2026-11-22",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-22T09:00:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-22T08:00:00+01:00"
+    },
+    {
+      "date": "2026-11-22",
+      "type": "OPERATING",
+      "closingTime": "2026-11-22T22:00:00+01:00",
+      "openingTime": "2026-11-22T09:00:00+01:00"
+    },
+    {
+      "date": "2026-11-23",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-23T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-23T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-23",
+      "type": "OPERATING",
+      "closingTime": "2026-11-23T22:00:00+01:00",
+      "openingTime": "2026-11-23T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-24",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-24T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-24T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-24",
+      "type": "OPERATING",
+      "closingTime": "2026-11-24T22:00:00+01:00",
+      "openingTime": "2026-11-24T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-25",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-25T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-25T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-25",
+      "type": "OPERATING",
+      "closingTime": "2026-11-25T22:00:00+01:00",
+      "openingTime": "2026-11-25T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-26",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-26T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-26T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-26",
+      "type": "OPERATING",
+      "closingTime": "2026-11-26T19:00:00+01:00",
+      "openingTime": "2026-11-26T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-27",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-27T09:30:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-27T08:30:00+01:00"
+    },
+    {
+      "date": "2026-11-27",
+      "type": "OPERATING",
+      "closingTime": "2026-11-27T20:30:00+01:00",
+      "openingTime": "2026-11-27T09:30:00+01:00"
+    },
+    {
+      "date": "2026-11-28",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-28T09:00:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-28T08:00:00+01:00"
+    },
+    {
+      "date": "2026-11-28",
+      "type": "OPERATING",
+      "closingTime": "2026-11-28T22:00:00+01:00",
+      "openingTime": "2026-11-28T09:00:00+01:00"
+    },
+    {
+      "date": "2026-11-29",
+      "type": "EXTRA_HOURS",
+      "closingTime": "2026-11-29T09:00:00+01:00",
+      "description": "Extra Magic Hours",
+      "openingTime": "2026-11-29T08:00:00+01:00"
+    },
+    {
+      "date": "2026-11-29",
+      "type": "OPERATING",
+      "closingTime": "2026-11-29T22:00:00+01:00",
+      "openingTime": "2026-11-29T09:00:00+01:00"
+    }
+  ]
+}

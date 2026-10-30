@@ -30,6 +30,10 @@ Gladys before reporting a problem.
 
 In scope: the code of this repository and the Docker image it publishes.
 
+The integration stores nothing in `/data` and handles no secret: it reads the
+public ThemeParks.wiki API over HTTPS, without a key, and only talks to that
+host and to Gladys. The configuration holds the chosen parks and the language.
+
 Out of scope: Gladys Assistant itself (see its
 [security policy](https://github.com/GladysAssistant/Gladys/security/policy)),
-and the third-party services and devices the integration talks to.
+and the ThemeParks.wiki service.

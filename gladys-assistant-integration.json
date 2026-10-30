@@ -1,177 +1,1092 @@
 {
   "manifest_version": 1,
   "type": "device",
-  "name": "Demo Devices Template",
+  "name": "Parcs d'attractions",
   "description": {
-    "en": "Starter template showing sensors, a switch, a dimmable light and a smart plug.",
-    "fr": "Template de démarrage : capteurs, interrupteur, lampe variable et prise connectée."
+    "en": "Live wait times and opening hours of theme parks: Disneyland Paris, Parc Astérix, Europa-Park…",
+    "fr": "Temps d'attente en direct et horaires des parcs : Disneyland Paris, Parc Astérix, Futuroscope…",
+    "de": "Live-Wartezeiten und Öffnungszeiten von Freizeitparks: Europa-Park, Phantasialand, Disneyland Paris…",
+    "es": "Tiempos de espera en directo y horarios de parques: PortAventura, Disneyland Paris, Parque Warner…"
   },
   "version": "1.0.0",
-  "docker_image": "ghcr.io/gladysassistant/integration-template-js:1.0.0",
-  "gladys_version": ">=5.1.0",
-  "cover_image": "https://raw.githubusercontent.com/GladysAssistant/integration-template-js/master/cover.png",
-  "categories": ["lighting", "security", "environment"],
-  "transports": ["local", "cloud"],
+  "docker_image": "ghcr.io/guim31/gladys-parcs-attractions:1.0.0",
+  "gladys_version": ">=5.3.0",
+  "cover_image": "https://raw.githubusercontent.com/guim31/gladys-parcs-attractions/main/cover.png",
+  "categories": ["leisure", "services"],
+  "transports": ["cloud"],
+  "keywords": [
+    "parc d'attractions",
+    "theme park",
+    "Freizeitpark",
+    "parque de atracciones",
+    "temps d'attente",
+    "wait times",
+    "Disneyland",
+    "Parc Astérix",
+    "Futuroscope",
+    "Europa-Park"
+  ],
   "config_schema": [
     {
       "key": "intro",
       "type": "section",
-      "label": { "en": "Getting started", "fr": "Pour commencer" },
+      "label": {
+        "en": "How it works",
+        "fr": "Fonctionnement",
+        "de": "So funktioniert es",
+        "es": "Funcionamiento"
+      },
       "description": {
-        "en": "The demo weather station reads real data from the free Open-Meteo API: pick the coordinates to observe. No account, no API key.",
-        "fr": "La station météo de démonstration lit de vraies données via l'API gratuite Open-Meteo : choisissez les coordonnées à observer. Pas de compte, pas de clé d'API."
+        "en": "Choose your parks and save: each park and its attractions appear in the Discover tab. Add the ones you want to Gladys. No account, no key. Powered by ThemeParks.wiki.",
+        "fr": "Choisissez vos parcs et enregistrez : chaque parc et ses attractions apparaissent dans l'onglet Découverte. Ajoutez ceux qui vous intéressent à Gladys. Sans compte ni clé. Données : ThemeParks.wiki.",
+        "de": "Wähle deine Parks und speichere: jeder Park und seine Attraktionen erscheinen im Tab „Entdecken“. Füge die gewünschten zu Gladys hinzu. Kein Konto, kein Schlüssel. Daten: ThemeParks.wiki.",
+        "es": "Elija sus parques y guarde: cada parque y sus atracciones aparecen en la pestaña Descubrir. Añada a Gladys los que le interesen. Sin cuenta ni clave. Datos: ThemeParks.wiki."
       },
       "links": [
         {
-          "url": "https://open-meteo.com/en/docs",
-          "label": { "en": "Open-Meteo documentation", "fr": "Documentation Open-Meteo" }
+          "url": "https://github.com/guim31/gladys-parcs-attractions/blob/main/docs/en.md",
+          "label": {
+            "en": "Setup guide",
+            "fr": "Guide de configuration",
+            "de": "Einrichtungsanleitung",
+            "es": "Guía de configuración"
+          }
+        },
+        {
+          "url": "https://www.themeparks.wiki",
+          "label": {
+            "en": "Powered by ThemeParks.wiki",
+            "fr": "Powered by ThemeParks.wiki",
+            "de": "Powered by ThemeParks.wiki",
+            "es": "Powered by ThemeParks.wiki"
+          }
         }
       ]
     },
     {
-      "key": "latitude",
-      "type": "number",
-      "label": { "en": "Latitude", "fr": "Latitude" },
-      "description": {
-        "en": "Latitude used for the demo weather sensor.",
-        "fr": "Latitude utilisée par le capteur météo de démonstration."
+      "key": "parks",
+      "type": "multi_select",
+      "label": {
+        "en": "Parks",
+        "fr": "Parcs",
+        "de": "Parks",
+        "es": "Parques"
       },
-      "placeholder": { "en": "e.g. 48.8566", "fr": "ex. 48.8566" },
-      "required": true,
-      "default": 48.8566,
-      "min": -90,
-      "max": 90
-    },
-    {
-      "key": "longitude",
-      "type": "number",
-      "label": { "en": "Longitude", "fr": "Longitude" },
       "description": {
-        "en": "Longitude used for the demo weather sensor.",
-        "fr": "Longitude utilisée par le capteur météo de démonstration."
+        "en": "European parks covered by ThemeParks.wiki. Others: the field below.",
+        "fr": "Parcs européens couverts par ThemeParks.wiki. Les autres : champ ci-dessous.",
+        "de": "Von ThemeParks.wiki abgedeckte Parks in Europa. Andere: Feld darunter.",
+        "es": "Parques europeos cubiertos por ThemeParks.wiki. Otros: el campo de abajo."
       },
-      "placeholder": { "en": "e.g. 2.3522", "fr": "ex. 2.3522" },
-      "required": true,
-      "default": 2.3522,
-      "min": -180,
-      "max": 180
-    },
-    {
-      "key": "unit",
-      "type": "select",
-      "label": { "en": "Temperature unit", "fr": "Unité de température" },
-      "required": false,
-      "default": "celsius",
       "options": [
-        { "value": "celsius", "label": { "en": "Celsius", "fr": "Celsius" } },
-        { "value": "fahrenheit", "label": { "en": "Fahrenheit", "fr": "Fahrenheit" } }
+        {
+          "value": "ca888437-ebb4-4d50-aed2-d227f7096968",
+          "label": {
+            "en": "Disney Adventure World (FR)",
+            "fr": "Disney Adventure World (FR)",
+            "de": "Disney Adventure World (FR)",
+            "es": "Disney Adventure World (FR)"
+          }
+        },
+        {
+          "value": "dae968d5-630d-4719-8b06-3d107e944401",
+          "label": {
+            "en": "Disneyland Park (FR)",
+            "fr": "Disneyland Park (FR)",
+            "de": "Disneyland Park (FR)",
+            "es": "Disneyland Park (FR)"
+          }
+        },
+        {
+          "value": "f111046c-f6e0-48f4-a1d2-bd9de612b980",
+          "label": {
+            "en": "Futuroscope (FR)",
+            "fr": "Futuroscope (FR)",
+            "de": "Futuroscope (FR)",
+            "es": "Futuroscope (FR)"
+          }
+        },
+        {
+          "value": "8d45b0e0-834c-4bef-afa9-a07d92e9f8f3",
+          "label": {
+            "en": "Nigloland (FR)",
+            "fr": "Nigloland (FR)",
+            "de": "Nigloland (FR)",
+            "es": "Nigloland (FR)"
+          }
+        },
+        {
+          "value": "9e938687-fd99-46f3-986a-1878210378f8",
+          "label": {
+            "en": "Parc Asterix (FR)",
+            "fr": "Parc Asterix (FR)",
+            "de": "Parc Asterix (FR)",
+            "es": "Parc Asterix (FR)"
+          }
+        },
+        {
+          "value": "28aee1df-1d05-4f53-bbf5-08f7aabff3a1",
+          "label": {
+            "en": "Walibi Rhône-Alpes (FR)",
+            "fr": "Walibi Rhône-Alpes (FR)",
+            "de": "Walibi Rhône-Alpes (FR)",
+            "es": "Walibi Rhône-Alpes (FR)"
+          }
+        },
+        {
+          "value": "0d8ea921-37b1-4a9a-b8ef-5b45afea847b",
+          "label": {
+            "en": "Alton Towers (GB)",
+            "fr": "Alton Towers (GB)",
+            "de": "Alton Towers (GB)",
+            "es": "Alton Towers (GB)"
+          }
+        },
+        {
+          "value": "f4bd1a23-44f0-444b-a91c-8d24f6ec5b1f",
+          "label": {
+            "en": "Attractiepark Toverland (NL)",
+            "fr": "Attractiepark Toverland (NL)",
+            "de": "Attractiepark Toverland (NL)",
+            "es": "Attractiepark Toverland (NL)"
+          }
+        },
+        {
+          "value": "164f3ee7-5fd7-47ac-addc-40b5e3e2b144",
+          "label": {
+            "en": "Bellewaerde (BE)",
+            "fr": "Bellewaerde (BE)",
+            "de": "Bellewaerde (BE)",
+            "es": "Bellewaerde (BE)"
+          }
+        },
+        {
+          "value": "3782a489-b9ca-428f-8bb5-4de4fc38d815",
+          "label": {
+            "en": "Blackpool Pleasure Beach (GB)",
+            "fr": "Blackpool Pleasure Beach (GB)",
+            "de": "Blackpool Pleasure Beach (GB)",
+            "es": "Blackpool Pleasure Beach (GB)"
+          }
+        },
+        {
+          "value": "b4c6ca41-1cf6-465b-9f65-aea736a308cb",
+          "label": {
+            "en": "Bobbejaanland (BE)",
+            "fr": "Bobbejaanland (BE)",
+            "de": "Bobbejaanland (BE)",
+            "es": "Bobbejaanland (BE)"
+          }
+        },
+        {
+          "value": "91c92c4c-e079-4488-8c99-385bc81bd5d7",
+          "label": {
+            "en": "Caribe Aquatic Park (ES)",
+            "fr": "Caribe Aquatic Park (ES)",
+            "de": "Caribe Aquatic Park (ES)",
+            "es": "Caribe Aquatic Park (ES)"
+          }
+        },
+        {
+          "value": "ae959d1f-9fcc-4aab-8063-71e641fa57f4",
+          "label": {
+            "en": "Chessington World of Adventures (GB)",
+            "fr": "Chessington World of Adventures (GB)",
+            "de": "Chessington World of Adventures (GB)",
+            "es": "Chessington World of Adventures (GB)"
+          }
+        },
+        {
+          "value": "90917f88-4774-46d9-8b5c-23e5b94e8ded",
+          "label": {
+            "en": "Djurs Sommerland (DK)",
+            "fr": "Djurs Sommerland (DK)",
+            "de": "Djurs Sommerland (DK)",
+            "es": "Djurs Sommerland (DK)"
+          }
+        },
+        {
+          "value": "30713cf6-69a9-47c9-a505-52bb965f01be",
+          "label": {
+            "en": "Efteling (NL)",
+            "fr": "Efteling (NL)",
+            "de": "Efteling (NL)",
+            "es": "Efteling (NL)"
+          }
+        },
+        {
+          "value": "d13baede-ab6d-419e-930a-ce7029a092e5",
+          "label": {
+            "en": "Energylandia (PL)",
+            "fr": "Energylandia (PL)",
+            "de": "Energylandia (PL)",
+            "es": "Energylandia (PL)"
+          }
+        },
+        {
+          "value": "639738d3-9574-4f60-ab5b-4c392901320b",
+          "label": {
+            "en": "Europa-Park (DE)",
+            "fr": "Europa-Park (DE)",
+            "de": "Europa-Park (DE)",
+            "es": "Europa-Park (DE)"
+          }
+        },
+        {
+          "value": "d06d91b8-7702-42c3-a8af-7d0161d471bf",
+          "label": {
+            "en": "Ferrari Land (ES)",
+            "fr": "Ferrari Land (ES)",
+            "de": "Ferrari Land (ES)",
+            "es": "Ferrari Land (ES)"
+          }
+        },
+        {
+          "value": "2fa98365-3f69-4741-a1c5-1f7e3a322b23",
+          "label": {
+            "en": "Flamingo Land (GB)",
+            "fr": "Flamingo Land (GB)",
+            "de": "Flamingo Land (GB)",
+            "es": "Flamingo Land (GB)"
+          }
+        },
+        {
+          "value": "043211c0-76f2-4456-89f8-4001be01018d",
+          "label": {
+            "en": "Gardaland (IT)",
+            "fr": "Gardaland (IT)",
+            "de": "Gardaland (IT)",
+            "es": "Gardaland (IT)"
+          }
+        },
+        {
+          "value": "5f28a518-dfb4-4650-a642-2d88c8e30d8e",
+          "label": {
+            "en": "Hansa-Park (DE)",
+            "fr": "Hansa-Park (DE)",
+            "de": "Hansa-Park (DE)",
+            "es": "Hansa-Park (DE)"
+          }
+        },
+        {
+          "value": "66e12a41-3a09-40cd-8f55-8d335d9d7d93",
+          "label": {
+            "en": "Heide Park (DE)",
+            "fr": "Heide Park (DE)",
+            "de": "Heide Park (DE)",
+            "es": "Heide Park (DE)"
+          }
+        },
+        {
+          "value": "99e7087b-951a-4322-84a8-572f26bc324d",
+          "label": {
+            "en": "LEGOLAND Billund (DK)",
+            "fr": "LEGOLAND Billund (DK)",
+            "de": "LEGOLAND Billund (DK)",
+            "es": "LEGOLAND Billund (DK)"
+          }
+        },
+        {
+          "value": "e35cd439-ca3c-4234-ad92-d699995d0cba",
+          "label": {
+            "en": "LEGOLAND Deutschland (DE)",
+            "fr": "LEGOLAND Deutschland (DE)",
+            "de": "LEGOLAND Deutschland (DE)",
+            "es": "LEGOLAND Deutschland (DE)"
+          }
+        },
+        {
+          "value": "a4f71074-e616-4de4-9278-72fdecbdc995",
+          "label": {
+            "en": "LEGOLAND Windsor (GB)",
+            "fr": "LEGOLAND Windsor (GB)",
+            "de": "LEGOLAND Windsor (GB)",
+            "es": "LEGOLAND Windsor (GB)"
+          }
+        },
+        {
+          "value": "93142d7e-024a-4877-9c72-f8e904a37c0c",
+          "label": {
+            "en": "Liseberg (SE)",
+            "fr": "Liseberg (SE)",
+            "de": "Liseberg (SE)",
+            "es": "Liseberg (SE)"
+          }
+        },
+        {
+          "value": "8bd6937c-71da-4c56-b780-600de69ba874",
+          "label": {
+            "en": "Mirabilandia (IT)",
+            "fr": "Mirabilandia (IT)",
+            "de": "Mirabilandia (IT)",
+            "es": "Mirabilandia (IT)"
+          }
+        },
+        {
+          "value": "bb26f3ad-3cad-4565-81b1-1ced1ed802c4",
+          "label": {
+            "en": "Movie Park Germany (DE)",
+            "fr": "Movie Park Germany (DE)",
+            "de": "Movie Park Germany (DE)",
+            "es": "Movie Park Germany (DE)"
+          }
+        },
+        {
+          "value": "44bda1cf-c82f-4df8-8331-9e8494eeff01",
+          "label": {
+            "en": "Movieland The Hollywood Park (IT)",
+            "fr": "Movieland The Hollywood Park (IT)",
+            "de": "Movieland The Hollywood Park (IT)",
+            "es": "Movieland The Hollywood Park (IT)"
+          }
+        },
+        {
+          "value": "1ea86991-e2c2-4771-8a32-c6e14c8298a9",
+          "label": {
+            "en": "Parque de Atracciones de Madrid (ES)",
+            "fr": "Parque de Atracciones de Madrid (ES)",
+            "de": "Parque de Atracciones de Madrid (ES)",
+            "es": "Parque de Atracciones de Madrid (ES)"
+          }
+        },
+        {
+          "value": "5adbd2f7-3694-4d23-aaec-4037a056573f",
+          "label": {
+            "en": "Parque Warner Madrid (ES)",
+            "fr": "Parque Warner Madrid (ES)",
+            "de": "Parque Warner Madrid (ES)",
+            "es": "Parque Warner Madrid (ES)"
+          }
+        },
+        {
+          "value": "6535c36f-ea51-4156-824e-f304b27fb1f6",
+          "label": {
+            "en": "Paultons Park (GB)",
+            "fr": "Paultons Park (GB)",
+            "de": "Paultons Park (GB)",
+            "es": "Paultons Park (GB)"
+          }
+        },
+        {
+          "value": "abb67808-61e3-49ef-996c-1b97ed64fac6",
+          "label": {
+            "en": "Phantasialand (DE)",
+            "fr": "Phantasialand (DE)",
+            "de": "Phantasialand (DE)",
+            "es": "Phantasialand (DE)"
+          }
+        },
+        {
+          "value": "f0ea9b9c-1ccb-4860-bfe6-b5aea7e4db2b",
+          "label": {
+            "en": "Plopsaland Belgium (BE)",
+            "fr": "Plopsaland Belgium (BE)",
+            "de": "Plopsaland Belgium (BE)",
+            "es": "Plopsaland Belgium (BE)"
+          }
+        },
+        {
+          "value": "3ad67aac-0b97-4961-8aa8-c3b8d2350873",
+          "label": {
+            "en": "Plopsaland Deutschland (DE)",
+            "fr": "Plopsaland Deutschland (DE)",
+            "de": "Plopsaland Deutschland (DE)",
+            "es": "Plopsaland Deutschland (DE)"
+          }
+        },
+        {
+          "value": "32608bdc-b3fa-478e-a8c0-9dde197a4212",
+          "label": {
+            "en": "PortAventura Park (ES)",
+            "fr": "PortAventura Park (ES)",
+            "de": "PortAventura Park (ES)",
+            "es": "PortAventura Park (ES)"
+          }
+        },
+        {
+          "value": "58392c29-d79d-49e4-9c35-0100d417d24e",
+          "label": {
+            "en": "Rulantica (DE)",
+            "fr": "Rulantica (DE)",
+            "de": "Rulantica (DE)",
+            "es": "Rulantica (DE)"
+          }
+        },
+        {
+          "value": "b08d9272-d070-4580-9fcd-375270b191a7",
+          "label": {
+            "en": "Thorpe Park (GB)",
+            "fr": "Thorpe Park (GB)",
+            "de": "Thorpe Park (GB)",
+            "es": "Thorpe Park (GB)"
+          }
+        },
+        {
+          "value": "1e5d9bac-1ef7-4f8f-b0a3-28cc6ff860f5",
+          "label": {
+            "en": "Traumatica (DE)",
+            "fr": "Traumatica (DE)",
+            "de": "Traumatica (DE)",
+            "es": "Traumatica (DE)"
+          }
+        },
+        {
+          "value": "21897ba2-cc63-460e-99b0-fcd4ca7c18ef",
+          "label": {
+            "en": "Walibi Belgium (BE)",
+            "fr": "Walibi Belgium (BE)",
+            "de": "Walibi Belgium (BE)",
+            "es": "Walibi Belgium (BE)"
+          }
+        },
+        {
+          "value": "18635b3e-fa23-4284-89dd-9fcd0aaa9c9c",
+          "label": {
+            "en": "Walibi Holland (NL)",
+            "fr": "Walibi Holland (NL)",
+            "de": "Walibi Holland (NL)",
+            "es": "Walibi Holland (NL)"
+          }
+        }
       ]
     },
     {
-      "key": "poll_frequency",
-      "type": "number",
-      "label": { "en": "Refresh interval (s)", "fr": "Intervalle de rafraîchissement (s)" },
-      "description": {
-        "en": "How often sensors are polled, in seconds (one minute minimum).",
-        "fr": "Fréquence d'interrogation des capteurs, en secondes (une minute minimum)."
-      },
+      "key": "other_parks",
+      "type": "string",
+      "default": "",
       "required": false,
-      "default": 300,
-      "min": 60,
-      "max": 3600
+      "label": {
+        "en": "Other parks",
+        "fr": "Autres parcs",
+        "de": "Andere Parks",
+        "es": "Otros parques"
+      },
+      "description": {
+        "en": "Any other park of ThemeParks.wiki (America, Asia…): its name or id, separated by commas.",
+        "fr": "Tout autre parc de ThemeParks.wiki (Amérique, Asie…) : son nom ou son identifiant, séparés par des virgules.",
+        "de": "Jeder andere Park von ThemeParks.wiki (Amerika, Asien…): Name oder ID, durch Kommas getrennt.",
+        "es": "Cualquier otro parque de ThemeParks.wiki (América, Asia…): su nombre o identificador, separados por comas."
+      },
+      "placeholder": {
+        "en": "Magic Kingdom Park, Tokyo DisneySea",
+        "fr": "Magic Kingdom Park, Tokyo DisneySea",
+        "de": "Magic Kingdom Park, Tokyo DisneySea",
+        "es": "Magic Kingdom Park, Tokyo DisneySea"
+      }
+    },
+    {
+      "key": "refresh_interval",
+      "type": "select",
+      "default": "300",
+      "label": {
+        "en": "Refresh",
+        "fr": "Rafraîchissement",
+        "de": "Aktualisierung",
+        "es": "Actualización"
+      },
+      "options": [
+        {
+          "value": "300",
+          "label": {
+            "en": "Every 5 minutes",
+            "fr": "Toutes les 5 minutes",
+            "de": "Alle 5 Minuten",
+            "es": "Cada 5 minutos"
+          }
+        },
+        {
+          "value": "600",
+          "label": {
+            "en": "Every 10 minutes",
+            "fr": "Toutes les 10 minutes",
+            "de": "Alle 10 Minuten",
+            "es": "Cada 10 minutos"
+          }
+        },
+        {
+          "value": "900",
+          "label": {
+            "en": "Every 15 minutes",
+            "fr": "Toutes les 15 minutes",
+            "de": "Alle 15 Minuten",
+            "es": "Cada 15 minutos"
+          }
+        }
+      ]
+    },
+    {
+      "key": "language",
+      "type": "select",
+      "default": "fr",
+      "label": {
+        "en": "Language of names and messages",
+        "fr": "Langue des noms et messages",
+        "de": "Sprache der Namen und Nachrichten",
+        "es": "Idioma de nombres y mensajes"
+      },
+      "description": {
+        "en": "Feature names are fixed when a device is added.",
+        "fr": "Les noms des fonctionnalités sont figés à l'ajout de l'appareil.",
+        "de": "Die Namen der Funktionen werden beim Hinzufügen festgelegt.",
+        "es": "Los nombres de las funciones se fijan al añadir el dispositivo."
+      },
+      "options": [
+        {
+          "value": "en",
+          "label": {
+            "en": "English",
+            "fr": "Anglais",
+            "de": "Englisch",
+            "es": "Inglés"
+          }
+        },
+        {
+          "value": "fr",
+          "label": {
+            "en": "French",
+            "fr": "Français",
+            "de": "Französisch",
+            "es": "Francés"
+          }
+        },
+        {
+          "value": "de",
+          "label": {
+            "en": "German",
+            "fr": "Allemand",
+            "de": "Deutsch",
+            "es": "Alemán"
+          }
+        },
+        {
+          "value": "es",
+          "label": {
+            "en": "Spanish",
+            "fr": "Espagnol",
+            "de": "Spanisch",
+            "es": "Español"
+          }
+        }
+      ]
     }
   ],
   "actions": [
     {
-      "key": "test_weather",
-      "label": { "en": "Test the weather provider", "fr": "Tester le fournisseur météo" },
-      "timeout_seconds": 30
-    },
-    {
-      "key": "identify",
-      "label": { "en": "Identify a device", "fr": "Identifier un appareil" },
-      "fields": [
-        {
-          "key": "device",
-          "type": "select",
-          "source": "devices",
-          "label": { "en": "Device", "fr": "Appareil" },
-          "required": true
-        }
-      ]
+      "key": "status",
+      "label": {
+        "en": "Status",
+        "fr": "État",
+        "de": "Status",
+        "es": "Estado"
+      },
+      "description": {
+        "en": "Parks read, attractions found, last readings and errors.",
+        "fr": "Parcs lus, attractions trouvées, dernières lectures et erreurs.",
+        "de": "Gelesene Parks, gefundene Attraktionen, letzte Abfragen und Fehler.",
+        "es": "Parques leídos, atracciones encontradas, últimas lecturas y errores."
+      },
+      "timeout_seconds": 30,
+      "fields": []
     }
   ],
   "scene_triggers": [
     {
-      "key": "motion_detected",
-      "label": { "en": "Motion detected", "fr": "Mouvement détecté" },
+      "key": "wait_below",
+      "label": {
+        "en": "Wait below a threshold",
+        "fr": "Attente sous un seuil",
+        "de": "Wartezeit unter einer Schwelle",
+        "es": "Espera por debajo de un umbral"
+      },
       "description": {
-        "en": "A demo motion sensor saw a person or an animal move.",
-        "fr": "Un détecteur de démonstration a vu bouger une personne ou un animal."
+        "en": "The posted wait of a followed attraction in service drops to the chosen threshold or below.",
+        "fr": "Le temps d'attente d'une attraction suivie en service descend au seuil choisi ou en dessous.",
+        "de": "Die Wartezeit einer verfolgten Attraktion in Betrieb fällt auf die gewählte Schwelle oder darunter.",
+        "es": "La espera de una atracción seguida en servicio baja al umbral elegido o por debajo."
       },
       "fields": [
         {
-          "key": "device",
-          "type": "select",
+          "key": "attraction",
+          "type": "multi_select",
           "source": "devices",
-          "label": { "en": "Sensor", "fr": "Détecteur" }
+          "required": false,
+          "label": {
+            "en": "Attractions",
+            "fr": "Attractions",
+            "de": "Attraktionen",
+            "es": "Atracciones"
+          },
+          "description": {
+            "en": "Empty: any followed attraction.",
+            "fr": "Vide : n'importe quelle attraction suivie.",
+            "de": "Leer: jede verfolgte Attraktion.",
+            "es": "Vacío: cualquier atracción seguida."
+          }
         },
         {
-          "key": "target",
-          "type": "multi_select",
-          "label": { "en": "What moved", "fr": "Ce qui a bougé" },
+          "key": "threshold",
+          "type": "select",
+          "required": true,
+          "label": {
+            "en": "Threshold (minutes)",
+            "fr": "Seuil (minutes)",
+            "de": "Schwelle (Minuten)",
+            "es": "Umbral (minutos)"
+          },
           "options": [
-            { "value": "person", "label": { "en": "Person", "fr": "Personne" } },
-            { "value": "animal", "label": { "en": "Animal", "fr": "Animal" } }
+            {
+              "value": "5",
+              "label": {
+                "en": "5 min",
+                "fr": "5 min",
+                "de": "5 min",
+                "es": "5 min"
+              }
+            },
+            {
+              "value": "10",
+              "label": {
+                "en": "10 min",
+                "fr": "10 min",
+                "de": "10 min",
+                "es": "10 min"
+              }
+            },
+            {
+              "value": "15",
+              "label": {
+                "en": "15 min",
+                "fr": "15 min",
+                "de": "15 min",
+                "es": "15 min"
+              }
+            },
+            {
+              "value": "20",
+              "label": {
+                "en": "20 min",
+                "fr": "20 min",
+                "de": "20 min",
+                "es": "20 min"
+              }
+            },
+            {
+              "value": "30",
+              "label": {
+                "en": "30 min",
+                "fr": "30 min",
+                "de": "30 min",
+                "es": "30 min"
+              }
+            },
+            {
+              "value": "45",
+              "label": {
+                "en": "45 min",
+                "fr": "45 min",
+                "de": "45 min",
+                "es": "45 min"
+              }
+            },
+            {
+              "value": "60",
+              "label": {
+                "en": "60 min",
+                "fr": "60 min",
+                "de": "60 min",
+                "es": "60 min"
+              }
+            }
           ]
         }
       ],
       "variables": [
         {
-          "key": "target",
+          "key": "attraction_name",
           "type": "string",
-          "label": { "en": "What moved", "fr": "Ce qui a bougé" }
+          "label": {
+            "en": "Attraction",
+            "fr": "Attraction",
+            "de": "Attraktion",
+            "es": "Atracción"
+          }
+        },
+        {
+          "key": "park_name",
+          "type": "string",
+          "label": {
+            "en": "Park",
+            "fr": "Parc",
+            "de": "Park",
+            "es": "Parque"
+          }
+        },
+        {
+          "key": "wait",
+          "type": "number",
+          "label": {
+            "en": "Wait (minutes)",
+            "fr": "Attente (minutes)",
+            "de": "Wartezeit (Minuten)",
+            "es": "Espera (minutos)"
+          }
+        }
+      ]
+    },
+    {
+      "key": "attraction_down",
+      "label": {
+        "en": "Attraction down",
+        "fr": "Attraction en panne",
+        "de": "Attraktion gestört",
+        "es": "Atracción averiada"
+      },
+      "description": {
+        "en": "A followed attraction in service goes down (breakdown announced by the park).",
+        "fr": "Une attraction suivie en service tombe en panne (arrêt annoncé par le parc).",
+        "de": "Eine verfolgte Attraktion in Betrieb fällt aus (vom Park gemeldete Störung).",
+        "es": "Una atracción seguida en servicio se avería (parada anunciada por el parque)."
+      },
+      "fields": [
+        {
+          "key": "attraction",
+          "type": "multi_select",
+          "source": "devices",
+          "required": false,
+          "label": {
+            "en": "Attractions",
+            "fr": "Attractions",
+            "de": "Attraktionen",
+            "es": "Atracciones"
+          },
+          "description": {
+            "en": "Empty: any followed attraction.",
+            "fr": "Vide : n'importe quelle attraction suivie.",
+            "de": "Leer: jede verfolgte Attraktion.",
+            "es": "Vacío: cualquier atracción seguida."
+          }
+        }
+      ],
+      "variables": [
+        {
+          "key": "attraction_name",
+          "type": "string",
+          "label": {
+            "en": "Attraction",
+            "fr": "Attraction",
+            "de": "Attraktion",
+            "es": "Atracción"
+          }
+        },
+        {
+          "key": "park_name",
+          "type": "string",
+          "label": {
+            "en": "Park",
+            "fr": "Parc",
+            "de": "Park",
+            "es": "Parque"
+          }
+        },
+        {
+          "key": "wait",
+          "type": "number",
+          "label": {
+            "en": "Wait (minutes)",
+            "fr": "Attente (minutes)",
+            "de": "Wartezeit (Minuten)",
+            "es": "Espera (minutos)"
+          }
+        }
+      ]
+    },
+    {
+      "key": "attraction_back",
+      "label": {
+        "en": "Attraction back in service",
+        "fr": "Attraction remise en service",
+        "de": "Attraktion wieder in Betrieb",
+        "es": "Atracción de nuevo en servicio"
+      },
+      "description": {
+        "en": "A followed attraction that was down is in service again.",
+        "fr": "Une attraction suivie qui était en panne est de nouveau en service.",
+        "de": "Eine verfolgte gestörte Attraktion ist wieder in Betrieb.",
+        "es": "Una atracción seguida que estaba averiada vuelve a estar en servicio."
+      },
+      "fields": [
+        {
+          "key": "attraction",
+          "type": "multi_select",
+          "source": "devices",
+          "required": false,
+          "label": {
+            "en": "Attractions",
+            "fr": "Attractions",
+            "de": "Attraktionen",
+            "es": "Atracciones"
+          },
+          "description": {
+            "en": "Empty: any followed attraction.",
+            "fr": "Vide : n'importe quelle attraction suivie.",
+            "de": "Leer: jede verfolgte Attraktion.",
+            "es": "Vacío: cualquier atracción seguida."
+          }
+        }
+      ],
+      "variables": [
+        {
+          "key": "attraction_name",
+          "type": "string",
+          "label": {
+            "en": "Attraction",
+            "fr": "Attraction",
+            "de": "Attraktion",
+            "es": "Atracción"
+          }
+        },
+        {
+          "key": "park_name",
+          "type": "string",
+          "label": {
+            "en": "Park",
+            "fr": "Parc",
+            "de": "Park",
+            "es": "Parque"
+          }
+        },
+        {
+          "key": "wait",
+          "type": "number",
+          "label": {
+            "en": "Wait (minutes)",
+            "fr": "Attente (minutes)",
+            "de": "Wartezeit (Minuten)",
+            "es": "Espera (minutos)"
+          }
+        }
+      ]
+    },
+    {
+      "key": "park_opened",
+      "label": {
+        "en": "Park opens",
+        "fr": "Le parc ouvre",
+        "de": "Park öffnet",
+        "es": "El parque abre"
+      },
+      "description": {
+        "en": "A followed park opens, according to its published hours.",
+        "fr": "Un parc suivi ouvre, d'après ses horaires publiés.",
+        "de": "Ein verfolgter Park öffnet, laut seinen veröffentlichten Öffnungszeiten.",
+        "es": "Un parque seguido abre, según su horario publicado."
+      },
+      "fields": [
+        {
+          "key": "park",
+          "type": "multi_select",
+          "source": "devices",
+          "required": false,
+          "label": {
+            "en": "Parks",
+            "fr": "Parcs",
+            "de": "Parks",
+            "es": "Parques"
+          },
+          "description": {
+            "en": "Empty: any followed park.",
+            "fr": "Vide : n'importe quel parc suivi.",
+            "de": "Leer: jeder verfolgte Park.",
+            "es": "Vacío: cualquier parque seguido."
+          }
+        }
+      ],
+      "variables": [
+        {
+          "key": "park_name",
+          "type": "string",
+          "label": {
+            "en": "Park",
+            "fr": "Parc",
+            "de": "Park",
+            "es": "Parque"
+          }
+        },
+        {
+          "key": "hours",
+          "type": "string",
+          "label": {
+            "en": "Today's hours",
+            "fr": "Horaires du jour",
+            "de": "Heutige Öffnungszeiten",
+            "es": "Horario de hoy"
+          }
         }
       ]
     }
   ],
   "scene_actions": [
     {
-      "key": "identify_device",
-      "label": { "en": "Identify a device", "fr": "Identifier un appareil" },
+      "key": "wait_summary",
+      "label": {
+        "en": "Get the wait times",
+        "fr": "Obtenir les temps d'attente",
+        "de": "Wartezeiten abrufen",
+        "es": "Obtener los tiempos de espera"
+      },
       "description": {
-        "en": "Make a device signal itself (the demo light blinks).",
-        "fr": "Fait se signaler un appareil (la lampe de démonstration clignote)."
+        "en": "Your followed attractions in a sentence ready to send: wait time, or down, closed.",
+        "fr": "Vos attractions suivies en une phrase prête à envoyer : temps d'attente, ou en panne, fermée.",
+        "de": "Deine verfolgten Attraktionen in einem fertigen Satz: Wartezeit, oder gestört, geschlossen.",
+        "es": "Sus atracciones seguidas en una frase lista para enviar: tiempo de espera, o averiada, cerrada."
       },
       "timeout_seconds": 15,
       "fields": [
         {
-          "key": "device",
-          "type": "select",
+          "key": "attractions",
+          "type": "multi_select",
           "source": "devices",
-          "label": { "en": "Device", "fr": "Appareil" },
-          "required": true
+          "required": false,
+          "label": {
+            "en": "Attractions",
+            "fr": "Attractions",
+            "de": "Attraktionen",
+            "es": "Atracciones"
+          },
+          "description": {
+            "en": "Empty: every followed attraction.",
+            "fr": "Vide : toutes les attractions suivies.",
+            "de": "Leer: alle verfolgten Attraktionen.",
+            "es": "Vacío: todas las atracciones seguidas."
+          }
         }
       ],
       "outputs": [
         {
-          "key": "signalled",
-          "type": "boolean",
-          "label": { "en": "Device signalled", "fr": "Appareil signalé" }
+          "key": "sentence",
+          "type": "string",
+          "label": {
+            "en": "Sentence",
+            "fr": "Phrase",
+            "de": "Satz",
+            "es": "Frase"
+          }
+        },
+        {
+          "key": "shortest_wait",
+          "type": "number",
+          "label": {
+            "en": "Shortest wait (minutes, -1 if none)",
+            "fr": "Attente la plus courte (minutes, -1 si aucune)",
+            "de": "Kürzeste Wartezeit (Minuten, -1 wenn keine)",
+            "es": "Espera más corta (minutos, -1 si no hay)"
+          }
+        },
+        {
+          "key": "operating_count",
+          "type": "number",
+          "label": {
+            "en": "Attractions in service",
+            "fr": "Attractions en service",
+            "de": "Attraktionen in Betrieb",
+            "es": "Atracciones en servicio"
+          }
         }
       ]
     }
   ],
   "widgets": [
     {
-      "key": "demo_status",
-      "label": { "en": "Demo status", "fr": "État de la démo" },
-      "description": {
-        "en": "Live temperature and plug power, plug connection and observed location.",
-        "fr": "Température et puissance en direct, connexion de la prise, position observée."
+      "key": "waits",
+      "label": {
+        "en": "Wait times",
+        "fr": "Temps d'attente",
+        "de": "Wartezeiten",
+        "es": "Tiempos de espera"
       },
-      "icon": "activity",
-      "action_timeout_seconds": 15
+      "description": {
+        "en": "Your followed attractions sorted by wait, colored by length, with the park hours.",
+        "fr": "Vos attractions suivies triées par attente, en couleur selon sa durée, avec les horaires.",
+        "de": "Deine verfolgten Attraktionen nach Wartezeit sortiert, farbig nach Dauer, mit Öffnungszeiten.",
+        "es": "Sus atracciones seguidas ordenadas por espera, en color según su duración, con el horario."
+      },
+      "icon": "clock",
+      "settings": [
+        {
+          "key": "attractions",
+          "type": "multi_select",
+          "source": "devices",
+          "required": false,
+          "label": {
+            "en": "Attractions shown",
+            "fr": "Attractions affichées",
+            "de": "Angezeigte Attraktionen",
+            "es": "Atracciones mostradas"
+          },
+          "description": {
+            "en": "Empty: every followed attraction (10 at most).",
+            "fr": "Vide : toutes les attractions suivies (10 au plus).",
+            "de": "Leer: alle verfolgten Attraktionen (höchstens 10).",
+            "es": "Vacío: todas las atracciones seguidas (10 como máximo)."
+          }
+        },
+        {
+          "key": "order",
+          "type": "select",
+          "default": "shortest",
+          "required": false,
+          "label": {
+            "en": "Order",
+            "fr": "Ordre",
+            "de": "Reihenfolge",
+            "es": "Orden"
+          },
+          "options": [
+            {
+              "value": "shortest",
+              "label": {
+                "en": "Shortest wait first",
+                "fr": "Attente la plus courte d'abord",
+                "de": "Kürzeste Wartezeit zuerst",
+                "es": "Espera más corta primero"
+              }
+            },
+            {
+              "value": "longest",
+              "label": {
+                "en": "Longest wait first",
+                "fr": "Attente la plus longue d'abord",
+                "de": "Längste Wartezeit zuerst",
+                "es": "Espera más larga primero"
+              }
+            }
+          ]
+        },
+        {
+          "key": "show_hours",
+          "type": "boolean",
+          "default": true,
+          "required": false,
+          "label": {
+            "en": "Show the park hours",
+            "fr": "Afficher les horaires du parc",
+            "de": "Öffnungszeiten des Parks anzeigen",
+            "es": "Mostrar el horario del parque"
+          }
+        },
+        {
+          "key": "show_credit",
+          "type": "boolean",
+          "default": true,
+          "required": false,
+          "label": {
+            "en": "Show the ThemeParks.wiki credit",
+            "fr": "Afficher le crédit ThemeParks.wiki",
+            "de": "ThemeParks.wiki-Hinweis anzeigen",
+            "es": "Mostrar el crédito de ThemeParks.wiki"
+          }
+        }
+      ]
     }
   ]
 }

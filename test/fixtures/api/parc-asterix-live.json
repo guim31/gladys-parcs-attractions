@@ -1,0 +1,1035 @@
+{
+  "id": "9e938687-fd99-46f3-986a-1878210378f8",
+  "name": "Parc Asterix",
+  "entityType": "PARK",
+  "timezone": "Europe/Paris",
+  "liveData": [
+    {
+      "id": "00308581-fad8-4ba6-a5eb-3d799e676661",
+      "name": "Illusionist Gladiator",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "34628",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:30:00+01:00",
+          "startTime": "2026-10-30T13:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:30:00+01:00",
+          "startTime": "2026-10-30T14:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:30:00+01:00",
+          "startTime": "2026-10-30T15:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T16:30:00+01:00",
+          "startTime": "2026-10-30T16:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T08:00:05.870Z"
+    },
+    {
+      "id": "04327c9a-d3b5-4799-8c7b-1581159fb3af",
+      "name": "Osiris Convolvulis",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31360",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 50
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T12:01:16.896Z"
+    },
+    {
+      "id": "0c6bffa5-49f7-45cc-bc74-18d2516a57da",
+      "name": "This is Madness!",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31519",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:20:00+01:00",
+          "startTime": "2026-10-30T12:20:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:20:00+01:00",
+          "startTime": "2026-10-30T13:20:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:30:00+01:00",
+          "startTime": "2026-10-30T15:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T16:30:00+01:00",
+          "startTime": "2026-10-30T16:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T08:00:05.841Z"
+    },
+    {
+      "id": "0e8e182c-227c-4f24-aa1c-2d49896c5e24",
+      "name": "The Tomb of the Gods Haunted House",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31379",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 35
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T10:29:17.414Z"
+    },
+    {
+      "id": "180bfedc-e321-4f6a-a01d-0d8927b157ca",
+      "name": "Gyrotechnix",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31378",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 20
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:52:16.842Z"
+    },
+    {
+      "id": "1b8beb77-bb06-4135-ac5b-11d5c9a7def1",
+      "name": "Discobelix",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31364",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 50
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:28:16.725Z"
+    },
+    {
+      "id": "1db36803-0a84-49aa-bdf9-588d9f31cf89",
+      "name": "The Pegasus Express",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31367",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 60
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:55:16.878Z"
+    },
+    {
+      "id": "2016b014-83ee-4460-916b-53d9c6f79144",
+      "name": "Caesar's Spies",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31307",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 50
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:49:16.723Z"
+    },
+    {
+      "id": "233300a9-108a-43d9-8dcf-2278dfc2ebaa",
+      "name": "The Pirate's Revenge - The Big Splash",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31361",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T10:04:15.191Z"
+    },
+    {
+      "id": "294340de-d5e6-4f25-9db4-6cf4aede8a09",
+      "name": "The Osiris Convolvulis Nighttime Spectacular",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31492",
+      "status": "CLOSED",
+      "lastUpdated": "2026-10-30T08:00:05.926Z"
+    },
+    {
+      "id": "2e468e8f-a6ee-47c7-b245-fc7b1aa490f4",
+      "name": "The Asterix Adventure",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31373",
+      "queue": {
+        "STANDBY": {}
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-04-06T13:52:12.274Z"
+    },
+    {
+      "id": "333f6f22-a960-4c58-8431-0f201a0b5f1e",
+      "name": "Hydrolix",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31327",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T10:46:15.403Z"
+    },
+    {
+      "id": "38f711f1-f93c-473a-a3ae-0c7801d8b11b",
+      "name": "The Monsters' Parade",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31494",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T17:30:00+01:00",
+          "startTime": "2026-10-30T17:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T08:00:05.759Z"
+    },
+    {
+      "id": "3b9877de-e19c-4a50-915f-c68a20a28c89",
+      "name": "Gaulish Parade",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31502",
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-30T09:09:25.341Z"
+    },
+    {
+      "id": "41af9338-4127-498f-b521-7f6d4750c811",
+      "name": "The Last Blaze",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31522",
+      "status": "CLOSED",
+      "lastUpdated": "2026-10-30T08:00:05.955Z"
+    },
+    {
+      "id": "445a2ffc-7c9c-4c92-bd01-e2b574a86513",
+      "name": "By Toutatis!",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31377",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 65
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:40:16.911Z"
+    },
+    {
+      "id": "5067386a-59f6-4ade-9b90-05ce0d32b9a0",
+      "name": "The Mini Train",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31319",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 10
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:41:17.947Z"
+    },
+    {
+      "id": "514ad8af-84a5-4487-b047-c4d2fad2e592",
+      "name": "The Roman Patrol",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31508",
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-30T09:09:25.359Z"
+    },
+    {
+      "id": "5175f8b8-f2fb-435f-a888-df2989642496",
+      "name": "Fulliautomatix",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31387",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 55
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:49:16.772Z"
+    },
+    {
+      "id": "5423b87f-bb54-4abc-a792-3e2c11b548f2",
+      "name": "The \"Hurrah\" Trail",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31358",
+      "status": "CLOSED",
+      "lastUpdated": "2026-10-30T12:01:16.885Z"
+    },
+    {
+      "id": "560efb1d-36c8-4b2a-b983-8efaf4d86f92",
+      "name": "Egyptian Fear Zone",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "34629",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T18:00:00+01:00",
+          "startTime": "2026-10-30T11:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T08:00:05.881Z"
+    },
+    {
+      "id": "57816ac4-931e-47b9-a8fa-3e746950db0e",
+      "name": "The Infernal Cauldrons",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31385",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 15
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:58:16.840Z"
+    },
+    {
+      "id": "5d4f3edf-9cc2-40f5-adab-3c4635726d22",
+      "name": "The Cauldrons",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31362",
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-27T17:10:36.758Z"
+    },
+    {
+      "id": "5d5e3dbe-36c7-43db-904a-dae5f4a3c173",
+      "name": "The Catacombs Haunted House",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31374",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 20
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:41:17.954Z"
+    },
+    {
+      "id": "5f24636a-dcd1-4243-87a5-235653d45bca",
+      "name": "Beware Menhirs!",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31372",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 35
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T10:58:16.449Z"
+    },
+    {
+      "id": "61dfbd4c-c7fc-4d3a-86d6-02388c3312a1",
+      "name": "The Descent of the Nile",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31389",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 40
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:04:16.597Z"
+    },
+    {
+      "id": "61e5ceae-214f-40db-9137-6132a407109d",
+      "name": "Olympian Diving Stars",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31510",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:45:00+01:00",
+          "startTime": "2026-10-30T11:45:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:00:00+01:00",
+          "startTime": "2026-10-30T14:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:15:00+01:00",
+          "startTime": "2026-10-30T15:15:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T17:00:00+01:00",
+          "startTime": "2026-10-30T17:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:31:15.364Z"
+    },
+    {
+      "id": "63348c49-43bd-467f-8dca-d8a68a0dcc81",
+      "name": "The Wrath of Anubis Haunted House",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31368",
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-09T09:07:19.513Z"
+    },
+    {
+      "id": "71a6c0d7-b750-436c-85ac-7edb50e14dd5",
+      "name": "The Missing Goblin",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31498",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:00:00+01:00",
+          "startTime": "2026-10-30T14:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:00:00+01:00",
+          "startTime": "2026-10-30T15:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T16:00:00+01:00",
+          "startTime": "2026-10-30T16:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T17:00:00+01:00",
+          "startTime": "2026-10-30T17:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T08:00:05.776Z"
+    },
+    {
+      "id": "72dd80e0-4513-44ca-822e-45c9061cbe33",
+      "name": "Gauls v Romans: The Match",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31485",
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-20T22:00:07.634Z"
+    },
+    {
+      "id": "7e4acdce-10f0-4d73-ad2a-c395f0829d83",
+      "name": "Enigmatix",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31324",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:07:16.438Z"
+    },
+    {
+      "id": "80244be2-1c9d-4fa9-b4ba-d24dec5d370b",
+      "name": "Getafix Play Area",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31365",
+      "queue": {
+        "STANDBY": {}
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-17T00:15:29.726Z"
+    },
+    {
+      "id": "8136e511-6e0e-4139-9fad-08379eb8ebb5",
+      "name": "Sirius's Last Dance",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31515",
+      "status": "CLOSED",
+      "lastUpdated": "2026-10-30T08:00:05.940Z"
+    },
+    {
+      "id": "860f0e58-1877-4c54-82f2-8cfbf7f02781",
+      "name": "The Mona Lisa Heist",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31483",
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-09T09:51:10.164Z"
+    },
+    {
+      "id": "8ab650da-d02c-465c-a897-2d9e454e03f8",
+      "name": "Viking Ice Rink",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31375",
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-09T09:07:19.597Z"
+    },
+    {
+      "id": "8fb42486-b1bc-40f5-8c11-99a46714dfba",
+      "name": "The Golden Boar Playground",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31376",
+      "queue": {
+        "STANDBY": {}
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-04-06T13:52:12.450Z"
+    },
+    {
+      "id": "90024b0d-df59-4290-bc1e-4c3d0287b47c",
+      "name": "Mini Dragon Ships",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31359",
+      "status": "CLOSED",
+      "lastUpdated": "2026-10-30T00:31:21.711Z"
+    },
+    {
+      "id": "902132d7-c4e2-403c-9ae4-945d8cd3927b",
+      "name": "Meet the Characters",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31505",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T18:00:00+01:00",
+          "startTime": "2026-10-30T12:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T08:00:05.789Z"
+    },
+    {
+      "id": "92fa4ad3-4130-4d05-805d-bc1404e4268b",
+      "name": "Icarus's Flight",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31311",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 30
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T12:01:16.851Z"
+    },
+    {
+      "id": "94ff45fe-a23a-40da-ab10-1ef87910d1ab",
+      "name": "The Forest of No Return",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "34631",
+      "status": "CLOSED",
+      "lastUpdated": "2026-10-30T11:40:16.920Z"
+    },
+    {
+      "id": "966c62ee-6b2f-4da3-8097-30a3aded45d9",
+      "name": "Ekonomikrisis Cruises",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31308",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:04:16.586Z"
+    },
+    {
+      "id": "9c50afe1-2fcd-4898-896d-2386fe4753f0",
+      "name": "Dance of the Living Dead",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31517",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:30:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:55:00+01:00",
+          "startTime": "2026-10-30T12:55:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:50:00+01:00",
+          "startTime": "2026-10-30T13:50:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:00:00+01:00",
+          "startTime": "2026-10-30T15:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T16:00:00+01:00",
+          "startTime": "2026-10-30T16:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T08:00:05.823Z"
+    },
+    {
+      "id": "9fcf7703-721c-404c-a2e0-300fdbf8db15",
+      "name": "Thunder 2 Zeus",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31356",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 70
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:58:29.961Z"
+    },
+    {
+      "id": "a6d23e7d-0d37-49ec-9cb4-4bd780085247",
+      "name": "The Trojan Horse",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31316",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 40
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T09:11:17.168Z"
+    },
+    {
+      "id": "a7eda825-c5e3-4007-ab91-893bb98551b0",
+      "name": "The Enchanting Gardens of Father Christmas",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31380",
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-09T09:07:19.731Z"
+    },
+    {
+      "id": "abf40d47-7426-4758-8d0c-702ad4afc420",
+      "name": "Mini Bumper Chariots",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31323",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T10:44:17.443Z"
+    },
+    {
+      "id": "ae1b2777-88a5-4b53-8c66-edb683c10b3e",
+      "name": "The Galley",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31317",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 10
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:55:16.867Z"
+    },
+    {
+      "id": "b0803da2-7c7b-44d9-a13b-6be30806a0e7",
+      "name": "A Backyard Scrap",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31497",
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-30T09:09:25.330Z"
+    },
+    {
+      "id": "b69307b5-ac15-496a-a3f5-cdef731cbd50",
+      "name": "Inthamix",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31328",
+      "status": "CLOSED",
+      "lastUpdated": "2026-10-30T00:31:21.686Z"
+    },
+    {
+      "id": "b7b7bdf6-366c-4122-b541-ae5974383412",
+      "name": "The Hellish Pompeii Haunted House",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31384",
+      "status": "CLOSED",
+      "lastUpdated": "2026-10-30T11:58:16.831Z"
+    },
+    {
+      "id": "ba094a33-7e91-4a4d-b5c5-056e7c1c6847",
+      "name": "Little Oaks Play Area",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31366",
+      "queue": {
+        "STANDBY": {}
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-04-06T13:52:11.049Z"
+    },
+    {
+      "id": "c2642fed-0a26-40cc-892d-df18a73beaf9",
+      "name": "Cleopatra's Offerings",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31509",
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-09T09:51:10.201Z"
+    },
+    {
+      "id": "c380d574-e3d5-4eed-8b5b-77e841bc7b10",
+      "name": "Obelix's Slide",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31386",
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-09T09:07:19.892Z"
+    },
+    {
+      "id": "c4e016bb-51b7-45b0-84d1-d70d0f6d0c75",
+      "name": "The Curse of Sirius",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "33728",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T18:00:00+01:00",
+          "startTime": "2026-10-30T11:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T08:00:05.853Z"
+    },
+    {
+      "id": "c6e9befe-0571-4e5e-95a8-1bcf7a0d988e",
+      "name": "The Mini Storm",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31310",
+      "status": "CLOSED",
+      "lastUpdated": "2026-10-29T21:10:21.201Z"
+    },
+    {
+      "id": "c8c5b10c-7f41-4539-995a-086c70bee93f",
+      "name": "A River in Ilia",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31309",
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-27T17:10:36.732Z"
+    },
+    {
+      "id": "d839c634-485b-4d96-9aaf-56f8a45bce31",
+      "name": "Ace Flying Squadron",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31321",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T07:58:09.521Z"
+    },
+    {
+      "id": "d8a3aa96-9761-4802-9fe2-f499781120df",
+      "name": "The Shipwreck Ball",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31514",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:30:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:50:00+01:00",
+          "startTime": "2026-10-30T11:50:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:00:00+01:00",
+          "startTime": "2026-10-30T13:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:20:00+01:00",
+          "startTime": "2026-10-30T13:20:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:30:00+01:00",
+          "startTime": "2026-10-30T14:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:50:00+01:00",
+          "startTime": "2026-10-30T14:50:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T16:00:00+01:00",
+          "startTime": "2026-10-30T16:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T16:20:00+01:00",
+          "startTime": "2026-10-30T16:20:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T17:30:00+01:00",
+          "startTime": "2026-10-30T17:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T17:50:00+01:00",
+          "startTime": "2026-10-30T17:50:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:21.532Z"
+    },
+    {
+      "id": "e069a90e-332d-4a39-8fc9-5f8cffcafccb",
+      "name": "Pirates All at Sea",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31513",
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-09T09:51:10.213Z"
+    },
+    {
+      "id": "e3817a6f-22f7-4e6c-8ad4-888b3d08f7ef",
+      "name": "Caesar's Carousel",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31306",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T07:58:09.502Z"
+    },
+    {
+      "id": "ea2f3fbb-1b0f-4e5d-be28-43935a729877",
+      "name": "Jason is back!",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "36165",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T18:00:00+01:00",
+          "startTime": "2026-10-30T11:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T08:00:05.907Z"
+    },
+    {
+      "id": "eaa7ee59-81ac-480b-85c6-29fd96694c9b",
+      "name": "The Mini Flying Chairs",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31320",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T08:02:16.451Z"
+    },
+    {
+      "id": "eae72564-40ca-4e3b-a834-fd3570b7bcde",
+      "name": "Aerodynamix",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31325",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 25
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:40:16.900Z"
+    },
+    {
+      "id": "ec41c619-0d3a-489c-b6b8-2d69dc02d02b",
+      "name": "Laundromatix",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31326",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T08:41:17.420Z"
+    },
+    {
+      "id": "ec6f1090-c071-468f-9ae5-c4aa7c329f2f",
+      "name": "Justforkix",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31357",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 65
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:49:16.753Z"
+    },
+    {
+      "id": "ed2966fb-0e16-457c-85cf-5348b5acb2e8",
+      "name": "The Tower of Edifis",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31383",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 30
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:49:16.763Z"
+    },
+    {
+      "id": "ee44c6c8-e418-4225-9f3b-8380783785c6",
+      "name": "SOS Hieroglyphix",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31304",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 10
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:20:18.254Z"
+    },
+    {
+      "id": "f33dbfa6-cf68-4d1c-bf2a-14bf5a5ce50b",
+      "name": "The Hydra of Lerna",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31312",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 10
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:40:16.887Z"
+    },
+    {
+      "id": "f355992d-6526-477a-864b-5274bc3c2bff",
+      "name": "The Menhir Express",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31363",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 15
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:46:17.171Z"
+    },
+    {
+      "id": "f4a2b9b1-c3c2-4dfc-a94a-4be7f9007402",
+      "name": "Battle with Brakkor",
+      "entityType": "SHOW",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31523",
+      "status": "CLOSED",
+      "lastUpdated": "2026-10-30T08:00:05.972Z"
+    },
+    {
+      "id": "f5e192b3-8d9c-4bdf-a4df-cb283ab56303",
+      "name": "Romulus and Rapidus",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31303",
+      "status": "CLOSED",
+      "lastUpdated": "2026-10-11T17:03:49.200Z"
+    },
+    {
+      "id": "fd00e3a8-8dfc-4161-8f2b-a043c072ff34",
+      "name": "The Flight of Ibis",
+      "entityType": "ATTRACTION",
+      "parkId": "9e938687-fd99-46f3-986a-1878210378f8",
+      "externalId": "31388",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:58:16.848Z"
+    }
+  ]
+}
