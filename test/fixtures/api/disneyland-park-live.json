@@ -1,0 +1,1707 @@
+{
+  "id": "dae968d5-630d-4719-8b06-3d107e944401",
+  "name": "Disneyland Park",
+  "entityType": "PARK",
+  "timezone": "Europe/Paris",
+  "liveData": [
+    {
+      "id": "0216ad22-bada-4303-9635-d7350a942fbc",
+      "name": "Disneyland Railroad Fantasyland Station",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NA16",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T08:32:13.452Z"
+    },
+    {
+      "id": "03871aa6-a0b5-41ee-8fd3-b2f4b8dccc79",
+      "name": "Frontierland Playground",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1RA07",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T08:02:13.353Z"
+    },
+    {
+      "id": "03992704-698d-474b-a721-a5ac3498edb9",
+      "name": "Buzz Lightyear Laser Blast",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1DA04",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 35
+        },
+        "PAID_RETURN_TIME": {
+          "price": {
+            "amount": 1600,
+            "currency": "EUR",
+            "formatted": "16,00 €"
+          },
+          "state": "AVAILABLE",
+          "returnEnd": "2026-10-30T14:50:00+01:00",
+          "returnStart": "2026-10-30T13:50:00+01:00"
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T12:00:14.524Z"
+    },
+    {
+      "id": "04123960-2968-4bea-ac47-c9aeba4ed581",
+      "name": "The Lucky Nugget Saloon",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1RR03",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T21:30:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:30:14.249Z"
+    },
+    {
+      "id": "07782089-5e83-4bee-8a39-735818551844",
+      "name": "Le Passage Enchanté d'Aladdin",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1AA03",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T07:29:13.599Z"
+    },
+    {
+      "id": "0d822af0-bf02-47a7-bc29-672d2fa4f7ab",
+      "name": "Pirates of the Caribbean",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1AA04",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 25
+        },
+        "PAID_RETURN_TIME": {
+          "price": {
+            "amount": 900,
+            "currency": "EUR",
+            "formatted": "9,00 €"
+          },
+          "state": "AVAILABLE",
+          "returnEnd": "2026-10-30T14:05:00+01:00",
+          "returnStart": "2026-10-30T13:05:00+01:00"
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T12:00:14.401Z"
+    },
+    {
+      "id": "14924bd7-ffbf-47ee-a96e-2d5bd3fb5f25",
+      "name": "Princess Pavilion: A Royal Invitation",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1M116",
+      "queue": {
+        "RETURN_TIME": {
+          "state": "TEMP_FULL",
+          "returnEnd": null,
+          "returnStart": null
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T08:53:13.457Z"
+    },
+    {
+      "id": "14f756d6-d6fa-4200-8b41-db84ba294fa6",
+      "name": "Phantom Manor",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1RA03",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 30
+        },
+        "PAID_RETURN_TIME": {
+          "price": {
+            "amount": 500,
+            "currency": "EUR",
+            "formatted": "5,00 €"
+          },
+          "state": "AVAILABLE",
+          "returnEnd": "2026-10-30T14:05:00+01:00",
+          "returnStart": "2026-10-30T13:05:00+01:00"
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T12:00:14.346Z"
+    },
+    {
+      "id": "20cfe5a4-8dab-4196-87c9-997740806d51",
+      "name": "Meet a goofy skeleton or his friend",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MG81",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T10:45:00+01:00",
+          "startTime": "2026-10-30T10:45:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:15:00+01:00",
+          "startTime": "2026-10-30T11:15:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:45:00+01:00",
+          "startTime": "2026-10-30T11:45:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:15:00+01:00",
+          "startTime": "2026-10-30T12:15:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:45:00+01:00",
+          "startTime": "2026-10-30T12:45:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:15:00+01:00",
+          "startTime": "2026-10-30T15:15:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:45:00+01:00",
+          "startTime": "2026-10-30T15:45:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T16:15:00+01:00",
+          "startTime": "2026-10-30T16:15:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.775Z"
+    },
+    {
+      "id": "222aa656-ac33-457c-8193-7c625949f40e",
+      "name": "Silver Spur Steakhouse",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1RR04",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T21:00:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:30:14.220Z"
+    },
+    {
+      "id": "252b9b03-f770-4979-b3b2-f4ffecc3894d",
+      "name": "Alice's Curious Labyrinth",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NA00",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T07:56:14.964Z"
+    },
+    {
+      "id": "2683a803-03c4-48b6-9bbd-a7298400a675",
+      "name": "Café Hyperion",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1DR01",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T21:30:00+01:00",
+          "startTime": "2026-10-30T11:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:00:15.190Z"
+    },
+    {
+      "id": "2aa73e46-8dcf-4201-b334-db31e6e6ca06",
+      "name": "Pirates' Beach",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1AA05",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T07:29:13.617Z"
+    },
+    {
+      "id": "323bec06-fef7-4a60-989d-e3fcf9d3db7e",
+      "name": "Thunder Mesa Riverboat Landing",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1RA06",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 20
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T08:50:13.361Z"
+    },
+    {
+      "id": "351af0dc-cd77-45f5-b6c2-a59e871b5a43",
+      "name": "Disneyland Railroad Discoveryland Station",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1DA10",
+      "queue": {
+        "STANDBY": {
+          "waitTime": null
+        }
+      },
+      "status": "CLOSED",
+      "lastUpdated": "2026-09-18T15:01:29.089Z"
+    },
+    {
+      "id": "38bafc85-cb48-488e-aa68-3e2d01ae6a10",
+      "name": "La Galerie de la Belle au Bois Dormant",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NA06",
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T07:01:20.948Z"
+    },
+    {
+      "id": "3a1cd3f7-9c42-4f9b-90fa-dab7ba113862",
+      "name": "Autopia, presented by Avis",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1DA03",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 45
+        },
+        "PAID_RETURN_TIME": {
+          "price": {
+            "amount": 900,
+            "currency": "EUR",
+            "formatted": "9,00 €"
+          },
+          "state": "AVAILABLE",
+          "returnEnd": "2026-10-30T14:05:00+01:00",
+          "returnStart": "2026-10-30T13:05:00+01:00"
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T12:00:14.538Z"
+    },
+    {
+      "id": "3a91b818-cb5f-4900-b93e-c67e25f5956d",
+      "name": "Agrabah Café Restaurant",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1AR06",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T20:00:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:30:14.121Z"
+    },
+    {
+      "id": "435401f8-b158-4e2b-b3e1-d824d75570fc",
+      "name": "Reserved viewing area: Disney Stars on Parade",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1RV01",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:03:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.796Z"
+    },
+    {
+      "id": "44eff9fa-cd05-4a00-89b3-e6cec4682636",
+      "name": "Meet Mickey Mouse",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1M115",
+      "queue": {
+        "RETURN_TIME": {
+          "state": "TEMP_FULL",
+          "returnEnd": null,
+          "returnStart": null
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T09:11:15.240Z"
+    },
+    {
+      "id": "46406e4a-4a02-4d30-89bc-ef1ed63c1ff9",
+      "name": "Dumbo the Flying Elephant",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NA05",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 30
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:27:13.596Z"
+    },
+    {
+      "id": "47c9613d-563a-45a9-9592-3021e72f0d13",
+      "name": "An Encounter with Captain Hook",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MG21",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:30:00+01:00",
+          "startTime": "2026-10-30T13:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:00:00+01:00",
+          "startTime": "2026-10-30T14:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:30:00+01:00",
+          "startTime": "2026-10-30T14:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:00:00+01:00",
+          "startTime": "2026-10-30T15:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:30:00+01:00",
+          "startTime": "2026-10-30T15:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T16:00:00+01:00",
+          "startTime": "2026-10-30T16:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T16:30:00+01:00",
+          "startTime": "2026-10-30T16:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.852Z"
+    },
+    {
+      "id": "4a0db383-6bb7-49e2-bc1e-06997e65325f",
+      "name": "Pizzeria Bella Notte",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NR06",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T20:00:00+01:00",
+          "startTime": "2026-10-30T11:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:00:15.253Z"
+    },
+    {
+      "id": "4b2f71bd-332b-478c-8cd0-8627b3ec13fc",
+      "name": "Cowboy Cookout Barbecue",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1RR00",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T17:00:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:30:14.171Z"
+    },
+    {
+      "id": "4e9e9271-1962-4fad-9f73-9370954018cf",
+      "name": "Reserved viewing area: Disney Tales of Magic",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1RV00",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T22:30:00+01:00",
+          "startTime": "2026-10-30T22:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.655Z"
+    },
+    {
+      "id": "53895b6d-d25d-4e08-a489-0c3d47dd183f",
+      "name": "Disneyland Railroad Frontierland Depot",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1RA10",
+      "queue": {
+        "STANDBY": {
+          "waitTime": null
+        }
+      },
+      "status": "CLOSED",
+      "lastUpdated": "2026-08-31T17:47:41.709Z"
+    },
+    {
+      "id": "594dabd8-ddc1-4835-aafa-f654e10ed2db",
+      "name": "Les Voyages de Pinocchio",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NA13",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 15
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:51:15.268Z"
+    },
+    {
+      "id": "5ae7196f-3096-478b-b602-b8fe49d964ea",
+      "name": "The Gibson Girl Ice Cream Parlour",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MR04",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T17:00:00+01:00",
+          "startTime": "2026-10-30T12:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T11:00:14.192Z"
+    },
+    {
+      "id": "5b3c8ce8-e773-4f4c-a508-cadde75188ce",
+      "name": "Market House Deli",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MR06",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T22:30:00+01:00",
+          "startTime": "2026-10-30T08:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T07:01:20.994Z"
+    },
+    {
+      "id": "5b492a0f-7c9f-4c82-b6dc-4d1be20f7b1e",
+      "name": "Plaza Gardens Restaurant",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MR08",
+      "status": "REFURBISHMENT",
+      "lastUpdated": "2026-08-15T09:26:57.199Z"
+    },
+    {
+      "id": "5d0ce227-7ad0-4402-a95b-6cf56f25a8ec",
+      "name": "Indiana Jones™ and the Temple of Peril",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1AA02",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 40
+        },
+        "SINGLE_RIDER": {
+          "waitTime": 20
+        },
+        "PAID_RETURN_TIME": {
+          "price": {
+            "amount": 900,
+            "currency": "EUR",
+            "formatted": "9,00 €"
+          },
+          "state": "AVAILABLE",
+          "returnEnd": "2026-10-30T14:05:00+01:00",
+          "returnStart": "2026-10-30T13:05:00+01:00"
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T12:00:14.419Z"
+    },
+    {
+      "id": "5d10b8b2-7d34-4794-8857-76688e5864bc",
+      "name": "Star Tours: The Adventures Continue*",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1DA09",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 25
+        },
+        "PAID_RETURN_TIME": {
+          "price": {
+            "amount": 500,
+            "currency": "EUR",
+            "formatted": "5,00 €"
+          },
+          "state": "AVAILABLE",
+          "returnEnd": "2026-10-30T14:05:00+01:00",
+          "returnStart": "2026-10-30T13:05:00+01:00"
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T12:00:14.494Z"
+    },
+    {
+      "id": "616bc6d6-5a14-4d39-90c3-88f6d61e5fd6",
+      "name": "Auberge de Cendrillon",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NR01",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T16:00:00+01:00",
+          "startTime": "2026-10-30T12:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T11:00:14.170Z"
+    },
+    {
+      "id": "63dfcdab-86c2-4185-99b1-5a353d81bb52",
+      "name": "Adventure Isle",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1AA00",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T08:02:13.432Z"
+    },
+    {
+      "id": "678d76cf-6b24-40ec-a536-26c3667745e8",
+      "name": "The Ice Cream Company",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MR05",
+      "status": "REFURBISHMENT",
+      "lastUpdated": "2026-09-27T22:02:04.506Z"
+    },
+    {
+      "id": "6bb88973-80d0-45cf-bffe-433f1c551362",
+      "name": "Horse-Drawn Streetcars",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MA02",
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T07:01:20.934Z"
+    },
+    {
+      "id": "70af9b14-8009-4ae2-a8db-1cefa8297be5",
+      "name": "Dr. Facilier Encounter",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1M134",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T09:30:00+01:00",
+          "startTime": "2026-10-30T09:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:30:00+01:00",
+          "startTime": "2026-10-30T13:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T16:00:00+01:00",
+          "startTime": "2026-10-30T16:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T17:00:00+01:00",
+          "startTime": "2026-10-30T17:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T18:15:00+01:00",
+          "startTime": "2026-10-30T18:15:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.839Z"
+    },
+    {
+      "id": "76e9e917-fe07-49d5-b604-f65d831210fa",
+      "name": "Pirate Galleon",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1AA08",
+      "queue": {
+        "STANDBY": {
+          "waitTime": null
+        }
+      },
+      "status": "CLOSED",
+      "lastUpdated": "2026-04-25T21:34:18.189Z"
+    },
+    {
+      "id": "777518c2-1c65-48ba-94a1-e19583c44bf5",
+      "name": "Disney Stars on Parade",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1GS21",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:03:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.678Z"
+    },
+    {
+      "id": "78abb817-4564-41e2-b0de-fa0df34664c1",
+      "name": "The Lion King: Rhythms of the Pride Lands",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1GS34",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:40:00+01:00",
+          "startTime": "2026-10-30T12:10:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:40:00+01:00",
+          "startTime": "2026-10-30T13:10:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T16:15:00+01:00",
+          "startTime": "2026-10-30T15:45:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T17:15:00+01:00",
+          "startTime": "2026-10-30T16:45:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.876Z"
+    },
+    {
+      "id": "7c5b2c2d-1082-4e5c-b155-dc492db16e6e",
+      "name": "Peter Pan's Flight",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NA10",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 65
+        },
+        "PAID_RETURN_TIME": {
+          "price": {
+            "amount": 1900,
+            "currency": "EUR",
+            "formatted": "19,00 €"
+          },
+          "state": "AVAILABLE",
+          "returnEnd": "2026-10-30T16:25:00+01:00",
+          "returnStart": "2026-10-30T15:25:00+01:00"
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T12:00:14.382Z"
+    },
+    {
+      "id": "7d0660a9-cc08-45c0-9ab7-2699f5369771",
+      "name": "Disney Tales of Magic",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1GS99",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T22:22:00+01:00",
+          "startTime": "2026-10-30T22:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.785Z"
+    },
+    {
+      "id": "7e426533-7727-47e5-8c8e-0dcd46198e57",
+      "name": "La Cabane des Robinson",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1AA01",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T07:53:13.353Z"
+    },
+    {
+      "id": "7ff5d512-aed5-479a-8b3d-9bd1efb4177b",
+      "name": "Casey Jr. – le Petit Train du Cirque",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NA03",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 20
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:39:13.921Z"
+    },
+    {
+      "id": "80b13f61-d9ad-4193-90b2-53a8f2c12d5a",
+      "name": "Meet Minnie or her friends across Europe",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MG86",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T10:00:00+01:00",
+          "startTime": "2026-10-30T10:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T10:30:00+01:00",
+          "startTime": "2026-10-30T10:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:00:00+01:00",
+          "startTime": "2026-10-30T11:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:30:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:00:00+01:00",
+          "startTime": "2026-10-30T12:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:30:00+01:00",
+          "startTime": "2026-10-30T12:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:00:00+01:00",
+          "startTime": "2026-10-30T13:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:30:00+01:00",
+          "startTime": "2026-10-30T13:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:00:00+01:00",
+          "startTime": "2026-10-30T14:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:30:00+01:00",
+          "startTime": "2026-10-30T14:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:00:00+01:00",
+          "startTime": "2026-10-30T15:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:30:00+01:00",
+          "startTime": "2026-10-30T15:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.597Z"
+    },
+    {
+      "id": "83fa9e7f-4a25-4bee-8e61-4fb8c59cd350",
+      "name": "La Tanière du Dragon",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NA12",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T07:01:20.827Z"
+    },
+    {
+      "id": "852d957c-382e-4afb-bb74-70c9a79055df",
+      "name": "Big Thunder Mountain",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1RA00",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 100
+        },
+        "PAID_RETURN_TIME": {
+          "price": {
+            "amount": 1800,
+            "currency": "EUR",
+            "formatted": "18,00 €"
+          },
+          "state": "AVAILABLE",
+          "returnEnd": "2026-10-30T18:40:00+01:00",
+          "returnStart": "2026-10-30T17:40:00+01:00"
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T12:00:14.335Z"
+    },
+    {
+      "id": "8598d1c9-9693-4b10-a7a8-50077ba62a3f",
+      "name": "Captain Jack's - Restaurant des Pirates",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1AR00",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T21:00:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:30:14.160Z"
+    },
+    {
+      "id": "87cfd100-48a3-4de7-a888-84016863f17f",
+      "name": "Meet Stitch",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MG80",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T08:30:00+01:00",
+          "startTime": "2026-10-30T08:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T09:00:00+01:00",
+          "startTime": "2026-10-30T09:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T09:30:00+01:00",
+          "startTime": "2026-10-30T09:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T10:00:00+01:00",
+          "startTime": "2026-10-30T10:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T10:30:00+01:00",
+          "startTime": "2026-10-30T10:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:00:00+01:00",
+          "startTime": "2026-10-30T11:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:30:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:00:00+01:00",
+          "startTime": "2026-10-30T12:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:30:00+01:00",
+          "startTime": "2026-10-30T12:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:00:00+01:00",
+          "startTime": "2026-10-30T13:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:30:00+01:00",
+          "startTime": "2026-10-30T13:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.539Z"
+    },
+    {
+      "id": "8ed1472a-4d2e-47f1-b848-353de0bc3670",
+      "name": "Blanche-Neige et les Sept Nains®",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NA01",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 25
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:45:13.380Z"
+    },
+    {
+      "id": "9056906c-0030-4951-be5e-44ac1f273491",
+      "name": "Le Pays des Contes de Fées, presented by Vittel",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NA09",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T07:53:13.326Z"
+    },
+    {
+      "id": "91d21453-03cc-4567-ac68-f5ef988d21db",
+      "name": "Mysterious Meeting",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MG65",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T10:00:00+01:00",
+          "startTime": "2026-10-30T10:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T10:30:00+01:00",
+          "startTime": "2026-10-30T10:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:00:00+01:00",
+          "startTime": "2026-10-30T11:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:30:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:00:00+01:00",
+          "startTime": "2026-10-30T12:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:30:00+01:00",
+          "startTime": "2026-10-30T14:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:00:00+01:00",
+          "startTime": "2026-10-30T15:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:30:00+01:00",
+          "startTime": "2026-10-30T15:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.551Z"
+    },
+    {
+      "id": "91dcdddf-7d7b-4429-a144-2ffb61d6c3ed",
+      "name": "An Encounter with the Queen of Hearts or with your friends from Wonderland",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MG23",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:45:00+01:00",
+          "startTime": "2026-10-30T12:45:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:00:00+01:00",
+          "startTime": "2026-10-30T13:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:30:00+01:00",
+          "startTime": "2026-10-30T13:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:00:00+01:00",
+          "startTime": "2026-10-30T14:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.608Z"
+    },
+    {
+      "id": "947a2cff-af23-4150-894e-78ce30adbcb2",
+      "name": "Meet Daisy and Donald",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MG78",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T08:30:00+01:00",
+          "startTime": "2026-10-30T08:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T09:00:00+01:00",
+          "startTime": "2026-10-30T09:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T09:30:00+01:00",
+          "startTime": "2026-10-30T09:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T10:00:00+01:00",
+          "startTime": "2026-10-30T10:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T10:30:00+01:00",
+          "startTime": "2026-10-30T10:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:00:00+01:00",
+          "startTime": "2026-10-30T12:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:30:00+01:00",
+          "startTime": "2026-10-30T12:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:00:00+01:00",
+          "startTime": "2026-10-30T13:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:30:00+01:00",
+          "startTime": "2026-10-30T13:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.701Z"
+    },
+    {
+      "id": "9838fa59-5f33-4818-b260-49c764564564",
+      "name": "Meet Jack Skellington and Sally (from Tim Burton’s The Nightmare Before Christmas ©Disney)",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MG19",
+      "queue": {
+        "RETURN_TIME": {
+          "state": "TEMP_FULL",
+          "returnEnd": null,
+          "returnStart": null
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T10:00:15.177Z"
+    },
+    {
+      "id": "98e16089-4a95-4565-830a-faf5f730272d",
+      "name": "Restaurant Hakuna Matata",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1AR07",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T17:00:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:30:14.208Z"
+    },
+    {
+      "id": "98e395e6-4a32-4995-98f2-ff766d86c368",
+      "name": "Cable Car Bake Shop",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MR00",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T22:00:00+01:00",
+          "startTime": "2026-10-30T09:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T08:02:13.639Z"
+    },
+    {
+      "id": "a5afa85c-ee58-4f47-8626-fa4057e7d266",
+      "name": "Disneyland Railroad Main Street Station",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MA05",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 30
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:24:13.647Z"
+    },
+    {
+      "id": "a970c245-4924-48bd-bced-efc14850b116",
+      "name": "Mickey’s PhilharMagic",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1G103",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:30:00+01:00",
+          "startTime": "2026-10-30T12:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:00:00+01:00",
+          "startTime": "2026-10-30T13:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:30:00+01:00",
+          "startTime": "2026-10-30T13:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:00:00+01:00",
+          "startTime": "2026-10-30T14:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:30:00+01:00",
+          "startTime": "2026-10-30T14:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:00:00+01:00",
+          "startTime": "2026-10-30T15:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:30:00+01:00",
+          "startTime": "2026-10-30T15:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T16:00:00+01:00",
+          "startTime": "2026-10-30T16:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T16:30:00+01:00",
+          "startTime": "2026-10-30T16:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T17:00:00+01:00",
+          "startTime": "2026-10-30T17:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T17:30:00+01:00",
+          "startTime": "2026-10-30T17:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T11:18:13.363Z"
+    },
+    {
+      "id": "ac95f062-776b-48d9-bc77-869a9307dac7",
+      "name": "Last Chance Cafe",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1RR02",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T21:30:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:30:14.182Z"
+    },
+    {
+      "id": "b1b4a657-792a-40c4-a230-a1aba54543c0",
+      "name": "Meet Chip and Dale",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MG77",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T10:45:00+01:00",
+          "startTime": "2026-10-30T10:45:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:15:00+01:00",
+          "startTime": "2026-10-30T11:15:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T11:45:00+01:00",
+          "startTime": "2026-10-30T11:45:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T12:15:00+01:00",
+          "startTime": "2026-10-30T12:15:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:15:00+01:00",
+          "startTime": "2026-10-30T15:15:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:45:00+01:00",
+          "startTime": "2026-10-30T15:45:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.586Z"
+    },
+    {
+      "id": "b1d843de-80b6-4ee1-bfd4-54d40f6026e7",
+      "name": "Cookie Kitchen",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MR03",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T22:30:00+01:00",
+          "startTime": "2026-10-30T08:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T07:01:20.970Z"
+    },
+    {
+      "id": "bcbd2214-0f75-4cae-8cff-087adf621330",
+      "name": "Rustler Roundup Shootin' Gallery",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1RA05",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T07:32:13.366Z"
+    },
+    {
+      "id": "bcc5567f-f00b-4a7d-8ee6-526cc8d3d5de",
+      "name": "Mad Hatter's Tea Cups",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NA08",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 10
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T10:54:14.600Z"
+    },
+    {
+      "id": "c8e304bd-876d-46e2-a412-7f8bc1e73a09",
+      "name": "Colonel Hathi’s Outpost Restaurant",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1AR03",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T21:30:00+01:00",
+          "startTime": "2026-10-30T11:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:00:15.229Z"
+    },
+    {
+      "id": "ca17a056-3f23-41d2-babb-af6b178a9456",
+      "name": "Walt’s – an American restaurant",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MR10",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T20:30:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:30:14.279Z"
+    },
+    {
+      "id": "ce87a0fe-c644-475e-abb6-9727e05cebff",
+      "name": "\"it's a small world\"",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NA07",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 15
+        },
+        "PAID_RETURN_TIME": {
+          "price": {
+            "amount": 500,
+            "currency": "EUR",
+            "formatted": "5,00 €"
+          },
+          "state": "AVAILABLE",
+          "returnEnd": "2026-10-30T14:05:00+01:00",
+          "returnStart": "2026-10-30T13:05:00+01:00"
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T12:00:14.321Z"
+    },
+    {
+      "id": "ced30c44-9b79-45de-a8c9-6347298756c1",
+      "name": "Le Carrousel de Lancelot",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NA02",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 10
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:15:13.452Z"
+    },
+    {
+      "id": "d0f981f2-9813-45a4-a623-a34380247b62",
+      "name": "Toad Hall Restaurant",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NR07",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T17:00:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:30:14.266Z"
+    },
+    {
+      "id": "d5c26c67-691b-4250-985f-fdda5e5ac233",
+      "name": "Casey’s Corner",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MR01",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T22:30:00+01:00",
+          "startTime": "2026-10-30T11:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:00:15.214Z"
+    },
+    {
+      "id": "d6c61231-8f9b-40fa-943a-fe1454e185e7",
+      "name": "Main Street Vehicles",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MA04",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T11:18:13.389Z"
+    },
+    {
+      "id": "d8d9f62a-9fa3-4aae-a568-4225afc35924",
+      "name": "Les Mystères du Nautilus",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1DA06",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T07:56:15.025Z"
+    },
+    {
+      "id": "ddca340c-7ba1-4f23-89eb-0d3d52c84bda",
+      "name": "Star Wars Hyperspace Mountain",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1DA08",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 45
+        },
+        "SINGLE_RIDER": {
+          "waitTime": 35
+        },
+        "PAID_RETURN_TIME": {
+          "price": {
+            "amount": 1600,
+            "currency": "EUR",
+            "formatted": "16,00 €"
+          },
+          "state": "AVAILABLE",
+          "returnEnd": "2026-10-30T14:10:00+01:00",
+          "returnStart": "2026-10-30T13:10:00+01:00"
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T12:00:14.479Z"
+    },
+    {
+      "id": "e133de74-a086-4991-9ad9-6b72368447bd",
+      "name": "Casa de Coco – Restaurante de Familia",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1RR01",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T21:30:00+01:00",
+          "startTime": "2026-10-30T11:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:00:15.202Z"
+    },
+    {
+      "id": "e9124220-9699-4014-8e65-06cad9814a5b",
+      "name": "Au Chalet de la Marionnette",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1NR02",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T20:00:00+01:00",
+          "startTime": "2026-10-30T11:30:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T10:30:14.134Z"
+    },
+    {
+      "id": "ecdccf64-f17e-4a13-9867-bac7d2c22f14",
+      "name": "An Encounter with Jafar",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MG22",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T09:30:00+01:00",
+          "startTime": "2026-10-30T09:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T10:00:00+01:00",
+          "startTime": "2026-10-30T10:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T10:30:00+01:00",
+          "startTime": "2026-10-30T10:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:00:00+01:00",
+          "startTime": "2026-10-30T13:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T13:30:00+01:00",
+          "startTime": "2026-10-30T13:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:00:00+01:00",
+          "startTime": "2026-10-30T14:00:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T14:30:00+01:00",
+          "startTime": "2026-10-30T14:30:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:00:00+01:00",
+          "startTime": "2026-10-30T15:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.725Z"
+    },
+    {
+      "id": "f0525c25-4ea2-49b7-aab5-150b27658fb6",
+      "name": "Orbitron®",
+      "entityType": "ATTRACTION",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1DA07",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 50
+        },
+        "PAID_RETURN_TIME": {
+          "price": {
+            "amount": 900,
+            "currency": "EUR",
+            "formatted": "9,00 €"
+          },
+          "state": "AVAILABLE",
+          "returnEnd": "2026-10-30T14:05:00+01:00",
+          "returnStart": "2026-10-30T13:05:00+01:00"
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2026-10-30T12:00:14.509Z"
+    },
+    {
+      "id": "f43b0d08-6197-4da9-ae62-cff690fdbeb8",
+      "name": "Mickey’s Halloween Celebration",
+      "entityType": "SHOW",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1GS07",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T15:50:00+01:00",
+          "startTime": "2026-10-30T15:25:00+01:00"
+        },
+        {
+          "type": "Performance Time",
+          "endTime": "2026-10-30T17:25:00+01:00",
+          "startTime": "2026-10-30T17:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-29T23:01:18.886Z"
+    },
+    {
+      "id": "f47b8d8b-a5a7-4f8c-a1ef-759621a5ee81",
+      "name": "Victoria’s Home-Style Restaurant",
+      "entityType": "RESTAURANT",
+      "parkId": "dae968d5-630d-4719-8b06-3d107e944401",
+      "externalId": "P1MR09",
+      "status": "OPERATING",
+      "operatingHours": [
+        {
+          "type": "OPERATING",
+          "endTime": "2026-10-30T20:00:00+01:00",
+          "startTime": "2026-10-30T12:00:00+01:00"
+        }
+      ],
+      "lastUpdated": "2026-10-30T11:00:14.236Z"
+    }
+  ]
+}

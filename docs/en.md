@@ -1,61 +1,155 @@
-# Demo Devices Template
+# Theme parks (Parcs d'attractions)
 
-This is the user documentation of the integration. Gladys re-hosts this file
-and shows a permanent **Documentation** link to it in the Configuration screen
-(in the user's language, with English as the fallback) — it is when
-configuring that the user needs it most. Keep the short onboarding hints in
-the `section` blocks of the manifest `config_schema`; put the long
-step-by-step (screenshots, troubleshooting…) here.
+The **live wait times and opening hours of theme parks**, attraction by attraction: Disneyland
+Paris, Parc Astérix, Futuroscope, Europa-Park, Efteling, PortAventura… and every park covered by
+ThemeParks.wiki (about 200 worldwide). **No account, no key.**
+
+**Powered by [ThemeParks.wiki](https://www.themeparks.wiki).** Unofficial integration, not
+affiliated with ThemeParks.wiki nor with any park or operator: park and attraction names are their
+owners' trademarks, used for identification only. Developed without visiting the parks: the data
+was checked live on 2026-10-30. Feedback welcome.
 
 ## What you get
 
-Six demo devices show up after installation: a weather station (real data
-from Open-Meteo), a switch, a dimmable light, a smart plug with power
-metering, a motion sensor and a camera.
+- One **device per park** you add: park open, today's hours (at the park's local time), average
+  wait and number of rides down.
+- One **device per attraction** you add: posted wait (minutes), in service or not, status (in
+  service, down, closed, under refurbishment).
+- A **widget** "Wait times": your attractions sorted by wait, in green, orange or red, with the
+  hours of their park.
+- Four **scene triggers**: the wait drops below a threshold, an attraction goes down, an attraction
+  is back in service, the park opens.
+- One **scene action**: the waits of your attractions in a sentence ready to send.
+
+## Requirements
+
+- Gladys Assistant **5.3.0** or later.
+- Internet access from Gladys: the data comes from the ThemeParks.wiki API.
+- No account, no API key.
+
+## Installation
+
+1. In Gladys, open **Integrations → Install from GitHub**.
+2. Enter `https://github.com/guim31/gladys-parcs-attractions` and confirm.
+3. Open the integration's configuration once it has started.
 
 ## Configuration
 
-1. Open the **Configuration** tab of the integration.
-2. Set the **latitude** and **longitude** the demo weather station should
-   observe (they default to Paris), and pick your temperature unit.
-   The **refresh interval** sets how often the weather station and the
-   plug's power are read: every 5 minutes by default, every minute at most.
-3. Save: the devices appear in the **Discovery** tab, ready to be added.
+### Settings
 
-The **Prefer the local connection** toggle drives the demo plug: it reports
-the channel it actually uses as a badge (local or cloud), with an orange dot
-when it runs degraded (local refused, cloud fallback).
+- **Parks**: the European parks covered by ThemeParks.wiki, French ones first. Choose one or more.
+- **Other parks**: any other park of ThemeParks.wiki (America, Asia…), typed by name or by its
+  ThemeParks.wiki id, separated by commas: `Magic Kingdom Park, Tokyo DisneySea`. A resort name
+  (`Walt Disney World® Resort`) brings all its parks. Accents and capitals do not matter.
+- **Refresh**: every 5, 10 or 15 minutes (5 by default, the shortest the service allows).
+- **Language of names and messages**: French by default. Feature names are fixed when a device is
+  added; the status texts, the widget and the scene action follow this setting.
 
-## Actions
+### Adding parks and attractions
 
-- **Test the weather provider** — performs a live request to Open-Meteo and
-  shows the current temperature and humidity under the button.
-- **Identify a device** — pick one of your devices in the list and it will
-  signal itself (the demo light "blinks" in the logs).
+Save the configuration: after a few seconds, the **Discover** tab lists each chosen park, then all
+its attractions ("Disneyland Park · Big Thunder Mountain"). Add the ones you want to Gladys: the
+park for its hours, the attractions you care about for their waits. A park with a device added
+keeps being read even if you untick it.
 
-## Scenes
+### Checking
 
-The integration adds its own cards to the scene editor (Gladys 5.1 or
-later), under the **Integrations** category:
+The **Status** action of the configuration lists the parks read, the number of attractions found,
+the time of the last reading, the last error and the parks typed by name that were not found.
 
-- **Motion detected** (trigger) — starts the scene when a demo motion sensor
-  sees something move. Optionally pick the sensor and what moved (person,
-  animal); left empty, any detection matches. The following actions can
-  read what moved with `{{triggerEvent.data.target}}`.
-- **Identify a device** (action) — makes the chosen device signal itself.
-  It returns whether the device could signal itself, so the following
-  actions can depend on it.
+## Devices
 
-## Dashboard
+**Park** ("Parc Asterix"):
 
-Add the **Demo status** widget to a dashboard: it shows the live
-temperature of the weather station and the power of the office plug, the
-connection the plug currently uses (orange when degraded) and the observed
-location. Its **Identify the light** button makes the demo light signal
-itself.
+| Feature       | Type              | Value                                                   |
+| ------------- | ----------------- | ------------------------------------------------------- |
+| Park open     | input, binary     | 1 inside today's published opening hours                |
+| Today's hours | text              | `09:00–18:00`, "closed today", at the park's local time |
+| Average wait  | duration, minutes | mean posted wait of the rides in service that post one  |
+| Rides down    | counter           | attractions announced down by the park                  |
+
+**Attraction** ("Parc Asterix · Thunder 2 Zeus"):
+
+| Feature    | Type              | Value                                                      |
+| ---------- | ----------------- | ---------------------------------------------------------- |
+| Wait time  | duration, minutes | posted standby wait; **0 when the ride is not in service** |
+| In service | input, binary     | 1 in service, 0 down, closed or under refurbishment        |
+| Status     | text              | in service, down, closed, under refurbishment              |
+
+Attractions without a queue (play areas, walk-throughs) publish no wait. Evening events with a
+separate ticket and early hours for hotel guests are not counted as the park's opening.
+
+## Dashboard widget
+
+**Wait times**: one row per attraction (10 at most), with the name you gave it in Gladys:
+
+- the wait, in **green** up to 15 minutes, **orange** up to 45, **red** beyond;
+- "down", "closed"… in grey when the ride is not in service, "data out of date" when the service has
+  not answered for 45 minutes.
+
+Settings: the attractions shown (all by default), the order (shortest or longest wait first),
+the **park hours** caption above ("Parc Asterix: open until 18:00") and the **ThemeParks.wiki**
+credit button below, both can be hidden.
+
+## Scene triggers
+
+| Trigger                    | When                                                          | Fields                 |
+| -------------------------- | ------------------------------------------------------------- | ---------------------- |
+| Wait below a threshold     | the wait of a ride in service drops to the threshold or below | attractions, threshold |
+| Attraction down            | a ride in service goes down                                   | attractions            |
+| Attraction back in service | a ride that was down is in service again                      | attractions            |
+| Park opens                 | a park reaches its opening time                               | parks                  |
+
+Thresholds: 5, 10, 15, 20, 30, 45 or 60 minutes. A wait is compared only between two readings in
+service: the first wait of the morning does not fire. An empty attraction or park field means any
+followed one. Variables: attraction, park, wait (minutes); for the park, its name and hours.
+
+## Scene action
+
+**Get the wait times**: the chosen attractions (all by default) in one sentence, for a message or a
+speaker: "Thunder 2 Zeus: 70 minutes wait. Osiris Convolvulis: down." Outputs: the sentence, the shortest
+wait in minutes (-1 when no ride is in service) and the number of rides in service, for a
+"Continue only if" step.
+
+## Scene examples
+
+- **Short queue**: trigger "Wait below a threshold" (Big Thunder Mountain, 15 min) → send a message
+  to your phone.
+- **Breakdown**: trigger "Attraction down" → message "{{attraction_name}} is down".
+- **Morning briefing** on park day: at 08:30, action "Get the wait times" → speak the sentence.
+
+## Data and refresh
+
+- Source: the public API of [ThemeParks.wiki](https://www.themeparks.wiki), without a key. Its
+  terms ask for an explicit User-Agent, live data read **at most once every five minutes** (the
+  service refreshes at that pace) and the credit "Powered by ThemeParks.wiki" where the data is
+  shown: the configuration screen, this guide and the widget carry it.
+- One request per park and per refresh, plus the schedule once a day (or every six hours). The
+  limit of the service (300 requests per minute) is far away; a refusal (HTTP 429) pauses the
+  readings for the delay it asks.
+- The waits are those the parks post: they may differ from the real wait.
 
 ## Troubleshooting
 
-The integration logs everything it does: check the integration logs from the
-Gladys UI (or `docker logs` on the host) with `LOG_LEVEL=debug` for the full
-detail.
+- **Nothing in Discover**: check that a park is chosen and saved, then run **Status**.
+- **"Parks not found"**: check the spelling against the
+  [ThemeParks.wiki directory](https://www.themeparks.wiki/browse/directory), or use the park id.
+- **"data out of date"**: the service has not answered for 45 minutes; the Status action shows the
+  last error.
+- **No wait on a ride**: the park posts none for it (play area, walk-through), or it is closed.
+- Logs: `LOG_LEVEL=debug` shows every reading.
+
+## Limitations
+
+- Developed without the hardware (no visit to the parks): feedback welcome.
+- Only the standby queue is read: single rider, virtual queues and paid fast passes are not.
+- Shows and restaurants are not offered as devices.
+- The hours are the ones the park publishes; an unannounced change shows at the next schedule
+  reading.
+- Park and attraction names come from the service, mostly in English.
+
+## Credits
+
+- Data: [ThemeParks.wiki](https://www.themeparks.wiki) and its contributors, free to use
+  with attribution.
+- Integration: [guim31](https://github.com/guim31), Apache-2.0 license.

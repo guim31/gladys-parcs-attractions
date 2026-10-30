@@ -1,0 +1,56 @@
+{
+  "id": "9e938687-fd99-46f3-986a-1878210378f8",
+  "name": "Parc Asterix",
+  "entityType": "PARK",
+  "timezone": "Europe/Paris",
+  "schedule": [
+    {
+      "date": "2026-10-30",
+      "type": "OPERATING",
+      "closingTime": "2026-10-30T18:00:00+01:00",
+      "openingTime": "2026-10-30T09:00:00+01:00"
+    },
+    {
+      "date": "2026-10-30",
+      "type": "TICKETED_EVENT",
+      "closingTime": "2026-10-31T01:00:00+01:00",
+      "openingTime": "2026-10-30T19:00:00+01:00"
+    },
+    {
+      "date": "2026-10-31",
+      "type": "OPERATING",
+      "closingTime": "2026-10-31T18:00:00+01:00",
+      "openingTime": "2026-10-31T09:00:00+01:00"
+    },
+    {
+      "date": "2026-10-31",
+      "type": "TICKETED_EVENT",
+      "closingTime": "2026-11-01T01:00:00+01:00",
+      "openingTime": "2026-10-31T19:00:00+01:00"
+    },
+    {
+      "date": "2026-11-01",
+      "type": "OPERATING",
+      "closingTime": "2026-11-01T19:00:00+01:00",
+      "openingTime": "2026-11-01T10:00:00+01:00"
+    },
+    {
+      "date": "2026-11-07",
+      "type": "OPERATING",
+      "closingTime": "2026-11-07T18:00:00+01:00",
+      "openingTime": "2026-11-07T09:00:00+01:00"
+    },
+    {
+      "date": "2026-11-07",
+      "type": "TICKETED_EVENT",
+      "closingTime": "2026-11-08T01:00:00+01:00",
+      "openingTime": "2026-11-07T19:00:00+01:00"
+    },
+    {
+      "date": "2026-11-08",
+      "type": "OPERATING",
+      "closingTime": "2026-11-08T19:00:00+01:00",
+      "openingTime": "2026-11-08T10:00:00+01:00"
+    }
+  ]
+}
