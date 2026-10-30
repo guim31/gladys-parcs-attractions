@@ -10,6 +10,8 @@ the notes of the version's GitHub Release.
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-10-30
+
 ### Added
 
 - Live wait times and opening hours of theme parks from ThemeParks.wiki (no
@@ -25,4 +27,5 @@ the notes of the version's GitHub Release.
   wait and the number of rides in service.
 - Documentation in English, French, German and Spanish.
 
-[Unreleased]: https://github.com/guim31/gladys-parcs-attractions/commits/main
+[Unreleased]: https://github.com/guim31/gladys-parcs-attractions/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/guim31/gladys-parcs-attractions/releases/tag/v1.0.0
