@@ -42,11 +42,19 @@ export const localDate = (ms, timeZone) => formatter('date', timeZone).format(ms
 /** "09:30", the time at the park. */
 export const localTime = (ms, timeZone) => formatter('time', timeZone).format(ms);
 
-/** The opening slots (type OPERATING) of the park's day `now` falls in. */
+/**
+ * The opening slots (type OPERATING) of the park's day `now` falls in, plus
+ * the slot still running past midnight (an evening 19:00–01:00 dated
+ * yesterday).
+ */
 export function todaySlots(slots, now, timeZone) {
   const today = localDate(now, timeZone);
   return (slots ?? [])
-    .filter((slot) => slot.type === 'OPERATING' && slot.date === today)
+    .filter(
+      (slot) =>
+        slot.type === 'OPERATING' &&
+        (slot.date === today || (slot.open <= now && now < slot.close)),
+    )
     .sort((a, b) => a.open - b.open);
 }
 

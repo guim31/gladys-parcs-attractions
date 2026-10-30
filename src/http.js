@@ -18,7 +18,7 @@ export class HttpError extends Error {
 }
 
 /** The Retry-After header of a 429 or a 503, in ms (seconds or an HTTP date). */
-export function retryAfterMs(response) {
+export function retryAfterMs(response, now = Date.now()) {
   const value = response.headers?.get?.('retry-after');
   if (!value) {
     return null;
@@ -28,7 +28,7 @@ export function retryAfterMs(response) {
     return Math.max(0, seconds * 1000);
   }
   const date = Date.parse(value);
-  return Number.isFinite(date) ? Math.max(0, date - Date.now()) : null;
+  return Number.isFinite(date) ? Math.max(0, date - now) : null;
 }
 
 /**
@@ -81,7 +81,7 @@ async function readCapped(response, url, maxBytes) {
 export async function getBuffer(
   fetchImpl,
   url,
-  { timeoutMs = 20000, maxBytes = 20e6, etag = null } = {},
+  { timeoutMs = 20000, maxBytes = 20e6, etag = null, now } = {},
 ) {
   let response;
   try {
@@ -107,7 +107,7 @@ export async function getBuffer(
     throw new HttpError(
       `${hostOf(url)}: HTTP ${response.status}`,
       response.status,
-      retryAfterMs(response),
+      retryAfterMs(response, now),
     );
   }
   const body = await readCapped(response, url, maxBytes);

@@ -115,8 +115,8 @@ export function parseSchedule(document) {
  * GET a document with its ETag: `{ document, etag }`, document null when the
  * server answered 304 (unchanged since `etag`).
  */
-export async function getConditional(fetchImpl, url, etag) {
-  const result = await getBuffer(fetchImpl, url, { etag, maxBytes: 5e6 });
+export async function getConditional(fetchImpl, url, etag, now) {
+  const result = await getBuffer(fetchImpl, url, { etag, maxBytes: 5e6, now });
   if (result.notModified) {
     return { document: null, etag };
   }

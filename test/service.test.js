@@ -319,3 +319,60 @@ test('the container reads on its own timer, without onPoll', async (t) => {
   await app.service.refreshing;
   assert.equal(network.calls.length, before + 1);
 });
+
+test('a 429 on the schedule keeps the live reading and its triggers', async (t) => {
+  const world = await createWorld();
+  t.after(() => world.app.stop());
+  await create(world, 'Thunder 2 Zeus');
+  // The schedule is due again: a new day at the park.
+  world.service.park(ASTERIX).scheduleDay = '2026-10-29';
+  world.network.routes[urlOf('parc-asterix-schedule.json')] = new Response('slow down', {
+    status: 429,
+    headers: { 'retry-after': '60' },
+  });
+  setLive(world, ASTERIX_LIVE, 'Thunder 2 Zeus', { status: 'DOWN', wait: null });
+  await cycle(world);
+  assert.deepEqual(sceneKeys(world), [['attraction_down', 'Thunder 2 Zeus', null]]);
+  assert.equal(world.service.park(ASTERIX).okAt, world.clock.now());
+});
+
+test('an evening slot past midnight: open, with its hours', async (t) => {
+  const world = await createWorld({ config: { parks: [ASTERIX] } });
+  t.after(() => world.app.stop());
+  const park = await create(world, isPark('Parc Asterix'));
+  const url = urlOf('parc-asterix-schedule.json');
+  world.network.routes[url] = {
+    ...world.network.routes[url],
+    schedule: [
+      {
+        date: '2026-10-30',
+        type: 'OPERATING',
+        openingTime: '2026-10-30T19:00:00+01:00',
+        closingTime: '2026-10-31T01:00:00+01:00',
+      },
+    ],
+  };
+  world.service.park(ASTERIX).slots = null;
+  world.clock.time = Date.UTC(2026, 9, 30, 23, 30, 0); // 00:30 in Paris
+  await world.service.refresh();
+  assert.equal(world.fake.lastState(featureId(park, 'open')), 1);
+  assert.equal(world.fake.lastState(featureId(park, 'hours')), '19:00–01:00');
+});
+
+test('no park_opened when a schedule read during the day shows a slot already running', async (t) => {
+  const world = await createWorld();
+  t.after(() => world.app.stop());
+  await create(world, isPark('Parc Asterix'));
+  const park = world.service.park(ASTERIX);
+  // Hours unknown until now, then published: the park did not just open.
+  const slots = park.slots;
+  park.slots = [];
+  await cycle(world);
+  park.slots = slots;
+  park.scheduleDay = localDateParis(world.clock.now());
+  await cycle(world);
+  assert.deepEqual(world.fake.sceneEvents, []);
+});
+
+const localDateParis = (ms) =>
+  new Date(ms).toLocaleDateString('en-CA', { timeZone: 'Europe/Paris' });

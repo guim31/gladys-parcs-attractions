@@ -33,7 +33,7 @@ import {
 } from './devices.js';
 import { REPORTS, TEXT, lines, render, say } from './messages.js';
 import { PARKS } from './parks.js';
-import { hoursText, localDate, localTime, nextOpening, openAt, todaySlots } from './time.js';
+import { hoursText, localDate, localTime, nextOpening, todaySlots } from './time.js';
 
 const logger = createLogger({ name: 'parcs' });
 
@@ -79,8 +79,7 @@ class Park {
     this.okAt = null;
     this.previousOkAt = null;
     this.error = null;
-    this.open = null; // open state at the last refresh, for the trigger
-    this.openAt = null;
+    this.openAt = null; // time of the last opening check, for the trigger
   }
 }
 
@@ -418,7 +417,12 @@ export class ThemeParks {
       return false;
     }
     try {
-      const { document, etag } = await getConditional(this.fetch, liveUrl(park.id), park.liveEtag);
+      const { document, etag } = await getConditional(
+        this.fetch,
+        liveUrl(park.id),
+        park.liveEtag,
+        now,
+      );
       park.liveEtag = etag;
       if (document) {
         const live = parseLive(document);
@@ -438,13 +442,24 @@ export class ThemeParks {
       return Boolean(document);
     } catch (err) {
       if (err.status === 429) {
-        this.backoffUntil = now + (err.retryAfterMs ?? DEFAULT_BACKOFF_MS);
+        this.pause(now, err);
       }
       if (!park.error) {
         logger.warn(`${park.name}: data unavailable: ${err.message}`);
       }
       park.error = err.message;
       return false;
+    }
+  }
+
+  /** A 429: no request until the delay it asks has passed (said once per pause). */
+  pause(now, err) {
+    const wasPaused = now < this.backoffUntil;
+    this.backoffUntil = now + (err.retryAfterMs ?? DEFAULT_BACKOFF_MS);
+    if (!wasPaused) {
+      logger.warn(
+        `ThemeParks.wiki asks to slow down: paused for ${Math.round((this.backoffUntil - now) / 1000)} s`,
+      );
     }
   }
 
@@ -456,17 +471,18 @@ export class ThemeParks {
     }
     try {
       const schedule = parseSchedule(
-        (await getConditional(this.fetch, scheduleUrl(park.id), null)).document,
+        (await getConditional(this.fetch, scheduleUrl(park.id), null, now)).document,
       );
       park.timezone = park.timezone ?? schedule.timezone;
       park.slots = schedule.slots;
       park.scheduleAt = now;
       park.scheduleDay = localDate(now, park.timezone);
     } catch (err) {
-      // The live data still counts; the hours wait for the next reading.
+      // The live data still counts (its events too); the hours wait for the
+      // next reading. A 429 pauses the next requests.
       logger.debug(`${park.name}: schedule unavailable: ${err.message}`);
       if (err.status === 429) {
-        throw err;
+        this.pause(now, err);
       }
     }
   }
@@ -531,23 +547,28 @@ export class ThemeParks {
     return events;
   }
 
-  /** The opening of a park added to Gladys, from its schedule. */
+  /**
+   * The opening of a park added to Gladys: an opening time of its schedule
+   * passed between the last check and now. A schedule that changes during the
+   * day (a slot already running when it is read) is not an opening.
+   */
   parkEvents(park) {
     if (!park.slots) {
       return [];
     }
     const now = this.now();
-    const open = openAt(park.slots, now);
-    const before = park.open;
-    const recent =
-      park.openAt !== null && now - park.openAt <= 2 * this.config.refreshSeconds * 1000 + 5000;
-    park.open = open;
+    const since = park.openAt;
+    const recent = since !== null && now - since <= 2 * this.config.refreshSeconds * 1000 + 5000;
     park.openAt = now;
-    if (!recent || before !== 0 || open !== 1) {
+    if (!recent) {
       return [];
     }
+    const opening = park.slots.find(
+      (slot) =>
+        slot.type === 'OPERATING' && slot.open > since && slot.open <= now && now < slot.close,
+    );
     const device = parkIds(this.gladys, park.id).device;
-    if (!this.watched().some((entry) => entry.deviceId === device)) {
+    if (!opening || !this.watched().some((entry) => entry.deviceId === device)) {
       return [];
     }
     return [
